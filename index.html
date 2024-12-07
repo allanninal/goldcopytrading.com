@@ -10,41 +10,143 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.goldcopytrading.com">
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQTS4MB9');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Enhanced Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYMV22G2B2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-JYMV22G2B2');
+
+      // Configure your GA4 property
+      gtag('config', 'G-JYMV22G2B2', {
+        'send_page_view': true,
+        'page_title': document.title,
+        'anonymize_ip': true,
+        'cookie_flags': 'secure;samesite=none',
+        'custom_map': {
+          'dimension1': 'user_type',
+          'dimension2': 'platform_preference'
+        }
+      });
+
+      // Track CTA button clicks
+      document.addEventListener('DOMContentLoaded', function() {
+        const ctaButtons = document.querySelectorAll('.cta-button');
+        ctaButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            gtag('event', 'cta_click', {
+              'event_category': 'engagement',
+              'event_label': this.textContent.trim(),
+              'platform': this.textContent.includes('LiteFinance') ? 'LiteFinance' : 'RoboForex'
+            });
+          });
+        });
+      });
+
+      // Track scroll depth
+      let scrollDepthTriggered = new Set();
+      window.addEventListener('scroll', function() {
+        const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+        [25, 50, 75, 100].forEach(threshold => {
+          if (scrollPercent >= threshold && !scrollDepthTriggered.has(threshold)) {
+            scrollDepthTriggered.add(threshold);
+            gtag('event', 'scroll_depth', {
+              'event_category': 'engagement',
+              'event_label': `${threshold}%`,
+              'non_interaction': true
+            });
+          }
+        });
+      });
+
+      // Track time on page
+      let timeOnPageTriggered = new Set();
+      setInterval(function() {
+        const timeOnPage = Math.floor((new Date() - window.performance.timing.navigationStart) / 1000);
+        [30, 60, 120, 300].forEach(threshold => {
+          if (timeOnPage >= threshold && !timeOnPageTriggered.has(threshold)) {
+            timeOnPageTriggered.add(threshold);
+            gtag('event', 'time_on_page', {
+              'event_category': 'engagement',
+              'event_label': `${threshold}s`,
+              'non_interaction': true
+            });
+          }
+        });
+      }, 1000);
+
+      // Track outbound links
+      document.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (link && link.hostname !== window.location.hostname) {
+          gtag('event', 'outbound_link', {
+            'event_category': 'engagement',
+            'event_label': link.href,
+            'transport_type': 'beacon'
+          });
+        }
+      });
     </script>
 
+    <!-- Add these meta tags -->
+    <meta name="theme-color" content="#0072ff">
+    <meta property="og:title" content="Maximize Your Portfolio with GoldCopyTrading.com">
+    <meta property="og:description" content="Get consistent growth in low-risk Cents Accounts that exclusively trade Gold (XAUUSD).">
+    <meta property="og:image" content="goldcopytrading-logo.png">
+
 <style>
-    /* General Styles */
+    /* CSS Variables */
+    :root {
+        --primary-color: #0072ff;
+        --secondary-color: #00c6ff;
+        --text-color: #666;
+        --heading-color: #0072ff;
+        --background-light: #f9f9f9;
+        --spacing-sm: 10px;
+        --spacing-md: 20px;
+        --spacing-lg: 30px;
+        --border-radius: 8px;
+        --transition-speed: 0.3s;
+    }
+
+    /* Global Styles */
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Inter', Arial, sans-serif;
         line-height: 1.6;
         margin: 0;
         padding: 0;
+        color: var(--text-color);
     }
 
+    /* Enhanced Header */
     header {
-        background: linear-gradient(to right, #00c6ff, #0072ff);
-        color: white;
-        padding: 20px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        padding: var(--spacing-lg);
         text-align: center;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px; /* Add space between elements */
+        gap: var(--spacing-sm);
     }
 
     header img {
-        max-width: 150px;
-        height: auto;
-        margin-bottom: 10px; /* Adds space below the logo */
-        position: static; /* Removes absolute positioning */
+        max-width: 80px; /* Reduced logo size */
+        position: absolute;
+        top: 10px;
+        left: 10px;
     }
 
     header h1 {
@@ -65,6 +167,7 @@
         padding: 20px;
         background: #f9f9f9;
         border-radius: 8px;
+        border: 1px solid #ddd;
     }
 
     ul {
@@ -76,10 +179,20 @@
         color: #0072ff;
     }
 
+    h2 {
+        color: #0072ff;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
     table {
         width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: var(--spacing-md) 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-radius: var(--border-radius);
+        overflow: hidden;
     }
 
     table th, table td {
@@ -91,6 +204,12 @@
     table th {
         background-color: #0072ff;
         color: white;
+    }
+
+    p {
+        text-align: center;
+        color: #666;
+        font-size: 0.9rem;
     }
 
     .legal {
@@ -130,20 +249,20 @@
 
     .cta-button {
         display: inline-block;
-        padding: 15px 25px;
-        font-size: 1rem;
+        padding: 15px 30px;
+        font-size: 1.1rem;
         color: #ffffff;
-        background: #00c6ff;
+        background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
         text-decoration: none;
-        font-weight: bold;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background 0.3s ease, transform 0.2s ease;
+        font-weight: 600;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 15px rgba(0, 114, 255, 0.2);
+        transition: all var(--transition-speed) ease;
     }
 
     .cta-button:hover {
-        background: #0072ff;
-        transform: scale(1.05); /* Slight zoom effect on hover */
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 114, 255, 0.3);
     }
 
     .cta-button:active {
@@ -162,9 +281,13 @@
     img {
         max-width: 100%;
         height: auto;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform var(--transition-speed) ease;
+    }
+
+    img:hover {
+        transform: scale(1.02);
     }
 
     /* Responsive Styles */
@@ -201,7 +324,12 @@
 
     @media (max-width: 768px) {
         header h1 {
-            font-size: 1.8rem;
+            font-size: 1.8rem; /* Adjusted font size for smaller screens */
+            margin-left: 100px; /* Added space for the logo */
+        }
+
+        img {
+            max-width: 100%; /* Ensured images are responsive */
         }
 
         header p {
@@ -215,6 +343,10 @@
         section {
             margin: 10px;
             padding: 10px;
+        }
+
+        table {
+            font-size: 0.9rem; /* Adjusted table font size for better readability */
         }
 
         table th, table td {
@@ -269,6 +401,13 @@
         footer {
             font-size: 0.85rem;
             padding: 8px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation: none !important;
+            transition: none !important;
         }
     }
 </style>
@@ -330,7 +469,11 @@
             <h3>LiteFinance Account Performance</h3>
             <img src="litefinance-current-performance.png" alt="LiteFinance Account Performance Graph">
             <p style="text-align: center; font-size: 0.9em; color: #555;">
-                Updated: December 6, 2024 — Covers performance from November 12 to December 5, 2024.
+                Updated: December 7, 2024 — Covers performance from November 12 to December 6, 2024.
+            </p>
+            <img src="litefinance-current-performance-metrics.png" alt="LiteFinance Account Performance Metrics">
+            <p style="text-align: center; font-size: 0.9em; color: #555;">
+                Updated: December 7, 2024 — Covers performance from November 12 to December 6, 2024.
             </p>
             <table>
                 <tr>
@@ -339,7 +482,7 @@
                 </tr>
                 <tr>
                     <td>Gain</td>
-                    <td>+9.55%</td>
+                    <td>+10.76%</td>
                 </tr>
                 <tr>
                     <td>Daily Profit</td>
@@ -347,15 +490,15 @@
                 </tr>
                 <tr>
                     <td>Monthly Profit</td>
-                    <td>+9.55%</td>
+                    <td>+10.76%</td>
                 </tr>
                 <tr>
                     <td>Balance</td>
-                    <td>$5,432.99 (Cents)</td>
+                    <td>$5,492.99 (Cents)</td>
                 </tr>
                 <tr>
                     <td>Total Trades</td>
-                    <td>215</td>
+                    <td>227</td>
                 </tr>
                 <tr>
                     <td>Profitability</td>
@@ -363,23 +506,23 @@
                 </tr>
                 <tr>
                     <td>Pips</td>
-                    <td>-3,229.0</td>
+                    <td>-2,029.0</td>
                 </tr>
                 <tr>
                     <td>Average Win</td>
-                    <td>137.36 pips / $11.68</td>
+                    <td>134.88 pips / $11.24</td>
                 </tr>
                 <tr>
                     <td>Average Loss</td>
-                    <td>-574.83 pips / $32.85</td>
+                    <td>-574.83 pips / -$32.85</td>
                 </tr>
                 <tr>
                     <td>Lots Traded</td>
-                    <td>13.00</td>
+                    <td>13.60</td>
                 </tr>
                 <tr>
                     <td>Profit Factor</td>
-                    <td>1.31</td>
+                    <td>1.35</td>
                 </tr>
                 <tr>
                     <td>Sharpe Ratio</td>
@@ -391,7 +534,7 @@
                 </tr>
                 <tr>
                     <td>Average Trade Length</td>
-                    <td>52m</td>
+                    <td>50m</td>
                 </tr>
             </table>
         </div>
@@ -400,8 +543,12 @@
         <div>
             <h3>RoboForex Account Performance</h3>
             <img src="roboforex-current-performance.png" alt="RoboForex Account Performance Graph">
+            <p style="text-align: center; font-size: 0.9em; color: #555;"></p>
+                Updated: December 7, 2024 — Covers performance from November 16 to December 6, 2024.
+            </p>
+            <img src="roboforex-current-performance-metrics.png" alt="RoboForex Account Performance Metrics">
             <p style="text-align: center; font-size: 0.9em; color: #555;">
-                Updated: December 6, 2024 — Covers performance from November 16 to December 5, 2024.
+                Updated: December 7, 2024 — Covers performance from November 16 to December 6, 2024.
             </p>
             <table>
                 <tr>
@@ -410,59 +557,47 @@
                 </tr>
                 <tr>
                     <td>Gain</td>
-                    <td>+14.46%</td>
+                    <td>+15.64%</td>
                 </tr>
                 <tr>
                     <td>Daily Profit</td>
-                    <td>0.68%</td>
+                    <td>0.69%</td>
                 </tr>
                 <tr>
                     <td>Monthly Profit</td>
-                    <td>+14.46%</td>
+                    <td>+15.64%</td>
                 </tr>
                 <tr>
                     <td>Balance</td>
-                    <td>$11,446.59 (Cents)</td>
+                    <td>$11,564.62 (Cents)</td>
                 </tr>
                 <tr>
                     <td>Total Trades</td>
-                    <td>143</td>
+                    <td>153</td>
                 </tr>
                 <tr>
                     <td>Profitability</td>
-                    <td>80%</td>
+                    <td>81%</td>
                 </tr>
                 <tr>
                     <td>Pips</td>
-                    <td>6,118.0</td>
+                    <td>7,191.0</td>
                 </tr>
                 <tr>
                     <td>Average Win</td>
-                    <td>158.03 pips / $23.55</td>
+                    <td>154.10 pips / $22.64</td>
                 </tr>
                 <tr>
                     <td>Average Loss</td>
-                    <td>-528.67 pips / $56.53</td>
+                    <td>-528.67 pips / -$56.53</td>
                 </tr>
                 <tr>
                     <td>Lots Traded</td>
-                    <td>17.09</td>
+                    <td>18.19</td>
                 </tr>
                 <tr>
                     <td>Profit Factor</td>
-                    <td>2.07</td>
-                </tr>
-                <tr>
-                    <td>Sharpe Ratio</td>
-                    <td>0.01</td>
-                </tr>
-                <tr>
-                    <td>Expectancy</td>
-                    <td>1,567.0</td>
-                </tr>
-                <tr>
-                    <td>Average Trade Length</td>
-                    <td>2h 8m</td>
+                    <td>2.15</td>
                 </tr>
             </table>
         </div>
@@ -479,12 +614,24 @@
         </p>
     </section>
 
-    <!-- Call to Action -->
-    <div class="cta">
+    <!-- Enhanced CTA Section -->
+    <div class="cta" role="complementary">
         <h2>Start Copy Trading Now!</h2>
         <div class="cta-buttons">
-            <a href="https://bit.ly/forex-copytrade" class="cta-button">Copy My LiteFinance Trades</a>
-            <a href="https://bit.ly/copy-roboforex" class="cta-button">Copy My RoboForex Trades</a>
+            <a href="https://bit.ly/forex-copytrade" 
+               class="cta-button" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Copy My LiteFinance Trades">
+                Copy My LiteFinance Trades
+            </a>
+            <a href="https://bit.ly/rf-copytrading" 
+               class="cta-button" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Copy My RoboForex Trades">
+                Copy My RoboForex Trades
+            </a>
         </div>
     </div>
 
@@ -516,5 +663,9 @@
         <p>&copy; 2024 GoldCopyTrading.com. All Rights Reserved.</p>
         <p>Follow us on Instagram: <a href="https://www.instagram.com/goldcopytrading.fx" target="_blank">@goldcopytrading.fx</a></p>
     </footer>
+
+    <!-- Add this right after the opening <body> tag -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 </html>
