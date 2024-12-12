@@ -1,0 +1,16 @@
+<table class="performance-metrics">
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for metric in include.metrics %}
+        <tr>
+            <td>{{ metric.name }}</td>
+            <td>{{ metric.value }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table> 
