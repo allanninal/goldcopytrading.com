@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Enhanced SEO Meta Tags -->
-    <title>GoldCopyTrading | Automated Gold Trading Starting at $30 | Copy Trading</title>
-    <meta name="description" content="Start automated gold trading with just $30. Copy professional XAUUSD trades with up to 28% monthly returns. Zero setup fees, cents accounts, and proven results.">
-    <meta name="keywords" content="gold trading, copy trading, XAUUSD trading, automated trading, forex copy trading, gold investment, LiteFinance, RoboForex, cents account trading">
+    <title>ForexCopyTrading | Start Copy Trading with LiteFinance | $10 Min Deposit</title>
+    <meta name="description" content="Start copy trading forex with just $10 on LiteFinance. Copy professional EURUSD and EURGBP trades with verified performance. Join thousands of successful traders today!">
+    <meta name="keywords" content="forex copy trading, social trading, LiteFinance, EURUSD trading, EURGBP trading, forex investment, copy trade forex">
     
     <!-- Add canonical URL -->
-    <link rel="canonical" href="https://www.goldcopytrading.com/" />
+    <link rel="canonical" href="https://www.forexcopytrading.com/" />
     
     <!-- Language alternates -->
-    <link rel="alternate" href="https://www.goldcopytrading.com" hreflang="x-default" />
-    <link rel="alternate" href="https://www.goldcopytrading.com" hreflang="en" />
+    <link rel="alternate" href="https://www.forexcopytrading.com" hreflang="x-default" />
+    <link rel="alternate" href="https://www.forexcopytrading.com" hreflang="en" />
     
     <!-- Open Graph Tags for Social Media -->
-    <meta property="og:title" content="GoldCopyTrading | Start Gold Trading with $30">
-    <meta property="og:description" content="Automated gold trading with proven results. Start with just $30, no setup fees.">
+    <meta property="og:title" content="Start Copy Trading Forex with LiteFinance | $10 Min Deposit">
+    <meta property="og:description" content="Copy professional forex trades automatically through LiteFinance. Start with just $10, no setup fees. Join successful traders today!">
     <meta property="og:image" content="[Your Logo URL]">
-    <meta property="og:url" content="https://www.goldcopytrading.com">
+    <meta property="og:url" content="https://www.forexcopytrading.com">
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GoldCopyTrading | Professional Gold Trading">
-    <meta name="twitter:description" content="Copy professional gold trades automatically. Start with $30.">
+    <meta name="twitter:title" content="ForexCopyTrading | Professional Forex Trading">
+    <meta name="twitter:description" content="Copy professional forex trades automatically. Start with $10. Verified by LiteFinance.">
     
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -90,7 +90,7 @@
         let timeOnPageTriggered = new Set();
         setInterval(function() {
           const timeOnPage = Math.floor((new Date() - window.performance.timing.navigationStart) / 1000);
-          [30, 60, 120, 300].forEach(threshold => {
+          [10, 60, 120, 100].forEach(threshold => {
             if (timeOnPage >= threshold && !timeOnPageTriggered.has(threshold)) {
               timeOnPageTriggered.add(threshold);
               gtag('event', 'time_on_page', {
@@ -141,103 +141,22 @@
 
     <style>
         /* Custom Styles */
-        :root {
-            --primary-color: #0072ff;
-            --secondary-color: #00c6ff;
-        }
-
         .gradient-bg {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
         }
-
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+        .hover-scale {
+            transition: transform 0.2s;
         }
-
-        /* Animation Classes */
-        .counter {
-            transition: all 0.5s ease-out;
+        .hover-scale:hover {
+            transform: scale(1.02);
         }
-
-        @keyframes floatUp {
-            0% { transform: translateY(20px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
-
-        .animate-float-up {
-            animation: floatUp 0.8s ease-out forwards;
-        }
-
-        /* Stat Cards Hover Effect */
-        .stat-card {
-            transition: transform 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 4px;
-        }
-
-        /* Button Hover Effects */
-        .hover-effect {
-            transition: all 0.3s ease;
-        }
-
-        .hover-effect:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 114, 255, 0.2);
-        }
-
         .cta-button {
-            position: relative;
-            overflow: hidden;
+            animation: pulse 2s infinite;
         }
-
-        .cta-button::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                to bottom right,
-                rgba(255,255,255,0) 0%,
-                rgba(255,255,255,0.1) 50%,
-                rgba(255,255,255,0) 100%
-            );
-            transform: rotate(45deg);
-            animation: shine 3s infinite;
-        }
-
-        @keyframes shine {
-            to {
-                transform: rotate(45deg) translate(50%, 50%);
-            }
-        }
-
-        /* Add this to adjust for the urgency banner */
-        .fixed {
-            top: 41px; /* Adjust this value based on your banner height */
-        }
-        
-        /* Adjust hero section padding to account for banner + nav */
-        .pt-24 {
-            padding-top: 6rem; /* Increase this value if needed */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0,114,255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0,114,255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0,114,255, 0); }
         }
     </style>
 
@@ -246,16 +165,16 @@
     {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "GoldCopyTrading Algorithm",
-        "url": "https://www.goldcopytrading.com",
-        "description": "Automated XAUUSD trading algorithm with cents account support",
+        "name": "ForexCopyTrading Algorithm",
+        "url": "https://www.forexcopytrading.com",
+        "description": "Automated EURUSD trading algorithm with cents account support",
         "offers": {
             "@type": "AggregateOffer",
             "lowPrice": "10",
             "highPrice": "100",
             "priceCurrency": "USD",
             "offerCount": "2",
-            "url": "https://www.goldcopytrading.com/#start"
+            "url": "https://www.forexcopytrading.com/#start"
         }
     }
     </script>
@@ -268,936 +187,177 @@
                 <svg class="w-5 h-5 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"/>
                 </svg>
-                <span class="font-medium">New Launch Special: Start trading gold with zero setup fees!</span>
+                <span class="font-medium">New Launch Special: Start forex trading with zero setup fees!</span>
             </div>
             <a href="#start-trading" class="text-blue-600 hover:text-blue-700 font-medium">Start Now →</a>
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <div class="font-bold text-2xl text-blue-600">GoldCopyTrading</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#features-section" class="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
-                    <a href="#accounts" class="text-gray-600 hover:text-blue-600 transition-colors">Accounts</a>
-                    <a href="#performance" class="text-gray-600 hover:text-blue-600 transition-colors">Performance</a>
-                    <a href="#pricing" class="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
-                    <a href="#start-trading" class="text-gray-600 hover:text-blue-600 transition-colors">Start Now</a>
-                    <a href="#faq-section" class="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a>
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-blue-600">ForexCopyTrading</span>
                 </div>
-                <!-- Mobile menu button -->
-                <button class="md:hidden text-gray-600" onclick="toggleMobileMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
-                    </svg>
-                </button>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#how-it-works" class="text-gray-600 hover:text-blue-600">How It Works</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-blue-600">Benefits</a>
+                    <a href="#start" class="text-gray-600 hover:text-blue-600">Get Started</a>
+                    <a href="https://bit.ly/litefinance-register-now" target="_blank" 
+                       class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        Open Account
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <!-- Mobile menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
-                <a href="#features-section" class="block py-2 text-gray-600">Features</a>
-                <a href="#accounts" class="block py-2 text-gray-600">Accounts</a>
-                <a href="#performance" class="block py-2 text-gray-600">Performance</a>
-                <a href="#pricing" class="block py-2 text-gray-600">Pricing</a>
-                <a href="#start-trading" class="block py-2 text-gray-600">Start Now</a>
-                <a href="#faq-section" class="block py-2 text-gray-600">FAQ</a>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#how-it-works" class="block px-3 py-2 text-gray-600">How It Works</a>
+                <a href="#benefits" class="block px-3 py-2 text-gray-600">Benefits</a>
+                <a href="#start" class="block px-3 py-2 text-gray-600">Get Started</a>
+                <a href="https://bit.ly/litefinance-register-now" target="_blank" 
+                   class="block px-3 py-2 text-blue-600 font-medium">Open Account</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-b from-blue-50 to-white overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%234338ca\" fill-opacity=\"0.4\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-        </div>
-
+    <section class="pt-24 pb-16 gradient-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="pt-16 pb-20 lg:pt-24 lg:pb-28">
-                <div class="relative z-10">
-                    <!-- Trust Badge -->
-                    <div class="flex justify-center mb-8">
-                        <div class="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full">
-                            <svg class="w-5 h-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                            <span class="text-blue-600 font-medium">Verified by LiteFinance & Myfxbook</span>
-                        </div>
-                    </div>
-
-                    <!-- Main Content -->
-                    <div class="text-center max-w-4xl mx-auto">
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
-                            Automated <span class="text-blue-600">Gold Trading</span> With Verified Performance
-                        </h1>
-                        <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                            Experience automated XAUUSD trading with our verified strategy. Start with just $30 and let our system work for you 24/5.
-                        </p>
-
-                        <!-- CTA Buttons -->
-                        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-                            <a href="#start-trading" 
-                               class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                                Start Trading Now
-                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                                </svg>
-                            </a>
-                            <a href="#performance" 
-                               class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-blue-600 bg-white border-2 border-blue-200 hover:border-blue-300 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
-                                View Performance
-                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19l-7-7 7-7m8 14l-7-7 7-7"/>
-                                </svg>
-                            </a>
-                        </div>
-
-                        <!-- Stats -->
-                        <div class="grid grid-cols-3 gap-6 max-w-3xl mx-auto">
-                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                <div class="text-2xl font-bold text-blue-600">70%</div>
-                                <div class="text-sm text-gray-600">Profit Share</div>
-                            </div>
-                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                <div class="text-2xl font-bold text-blue-600">24/5</div>
-                                <div class="text-sm text-gray-600">Trading Hours</div>
-                            </div>
-                            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                <div class="text-2xl font-bold text-blue-600">$30</div>
-                                <div class="text-sm text-gray-600">Min. Investment</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Verified Performance -->
-    <section class="bg-blue-50 py-12 border-y border-blue-100">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm mb-6">
-                Verified Performance 🏆
-            </div>
-            <h2 class="text-3xl font-bold mb-4">Independently Verified Results</h2>
-            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-                Unlike competitors with unverified claims, our performance is transparently tracked and verified by trusted third-party platforms
-            </p>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-                <a href="https://bit.ly/forex-copytrade" target="_blank" 
-                   class="flex items-center space-x-3 text-blue-600 hover:text-blue-700 bg-white hover:bg-blue-50 px-8 py-4 rounded-lg transition-all border-2 border-blue-200 hover:border-blue-300 shadow-sm hover:shadow-md">
-                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    <span class="font-bold text-lg">LiteFinance Trading Statistics</span>
-                </a>
-                <a href="https://www.myfxbook.com/members/allanninal/roboforex/11223711" target="_blank" 
-                   class="flex items-center space-x-3 text-blue-600 hover:text-blue-700 bg-white hover:bg-blue-50 px-8 py-4 rounded-lg transition-all border-2 border-blue-200 hover:border-blue-300 shadow-sm hover:shadow-md">
-                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.8l-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"/>
-                    </svg>
-                    <span class="font-bold text-lg">Verified by Myfxbook</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Badges -->
-    <section class="py-8 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-wrap justify-center gap-8 items-center">
-                <div class="text-center p-4">
-                    <svg class="w-16 h-16 mx-auto mb-2 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    <div class="text-sm text-gray-600">Third-Party Verified</div>
-                </div>
-                <div class="text-center p-4">
-                    <svg class="w-16 h-16 mx-auto mb-2 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7m-6 4h4" />
-                    </svg>
-                    <div class="text-sm text-gray-600">Secure Platform</div>
-                </div>
-                <div class="text-center p-4">
-                    <svg class="w-16 h-16 mx-auto mb-2 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                    </svg>
-                    <div class="text-sm text-gray-600">24/7 Support</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Algorithm Features -->
-    <section id="features-section" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4">Why Choose Our Copy Trading Service?</h2>
-            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                Our algorithm is designed for consistent performance with conservative risk management
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- XAUUSD Feature -->
-                <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">XAUUSD</h3>
-                        <p class="text-gray-600">Specialized in Gold Trading</p>
-                        <p class="text-sm text-gray-500 mt-4">Focus on a single instrument for optimal performance</p>
-                    </div>
-                </div>
-
-                <!-- Timeframe Feature -->
-                <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">H1 Timeframe</h3>
-                        <p class="text-gray-600">Hourly Analysis</p>
-                        <p class="text-sm text-gray-500 mt-4">Balanced between quick signals and noise reduction</p>
-                    </div>
-                </div>
-
-                <!-- Trading Hours Feature -->
-                <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v5l3 3" />
-                        </svg>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">24/5 Trading</h3>
-                        <p class="text-gray-600">Market Hours Coverage</p>
-                        <p class="text-sm text-gray-500 mt-4">Continuous monitoring during all trading sessions</p>
-                    </div>
-                </div>
-
-                <!-- Lot Size Feature -->
-                <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">0.01 Lot</h3>
-                        <p class="text-gray-600">Per 3,000 Cents</p>
-                        <p class="text-sm text-gray-500 mt-4">Conservative position sizing for risk management</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Features List -->
-            <div class="mt-12">
-                <h3 class="text-2xl font-bold text-center mb-8">Advanced Trading Features</h3>
-                <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                    Our algorithm incorporates sophisticated features to maximize performance while maintaining strict risk management
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Copy Professional Forex Trades Automatically
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">
+                    Start with just $10 on LiteFinance's trusted copy trading platform
                 </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Smart Stop Loss -->
-                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
-                        <div class="flex items-start space-x-4">
-                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-blue-600 mb-2">Smart Stop Loss</h4>
-                                <p class="text-gray-600 mb-3">Dynamic protection against market volatility</p>
-                                <ul class="text-sm text-gray-500 space-y-2">
-                                    <li class="flex items-center">
-                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        Adaptive to market conditions
-                                    </li>
-                                    <li class="flex items-center">
-                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        Prevents large drawdowns
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                    <a href="https://bit.ly/litefinance-register-now" target="_blank"
+                       class="cta-button bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
+                        Create Free Account
+                    </a>
+                    <a href="https://bit.ly/litefinance-copytrade" target="_blank"
+                       class="bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition-colors">
+                        View Copy Trading
+                    </a>
+                </div>
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                    <div class="bg-white bg-opacity-10 rounded-lg p-4">
+                        <div class="text-3xl font-bold">$10</div>
+                        <div class="text-sm opacity-80">Min Deposit</div>
                     </div>
-
-                    <!-- Automated Execution -->
-                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
-                        <div class="flex items-start space-x-4">
-                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-blue-600 mb-2">Automated Execution</h4>
-                                <p class="text-gray-600 mb-3">24/5 operation without manual intervention</p>
-                                <ul class="text-sm text-gray-500 space-y-2">
-                                    <li class="flex items-center">
-                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        Instant trade execution
-                                    </li>
-                                    <li class="flex items-center">
-                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        No emotional trading
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-4">
+                        <div class="text-3xl font-bold">24/5</div>
+                        <div class="text-sm opacity-80">Trading Hours</div>
                     </div>
-
-                    <!-- Risk Management -->
-                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
-                        <div class="flex items-start space-x-4">
-                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-blue-600 mb-2">Risk Management</h4>
-                                <p class="text-gray-600 mb-3">Conservative position sizing and exposure control</p>
-                                <ul class="text-sm text-gray-500 space-y-2">
-                                    <li class="flex items-center">
-                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        Dynamic position sizing
-                                    </li>
-                                    <li class="flex items-center">
-                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        Built-in stop losses
-                                    </li>
-                                    <li class="flex items-center">
-                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        Dynamic take profit levels
-                                    </li>
-                                    <li class="flex items-center">
-                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        Maximum exposure limits
-                                    </li>
-                                    <li class="flex items-center">
-                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                        Focus on single instrument (XAUUSD)
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-4">
+                        <div class="text-3xl font-bold">0%</div>
+                        <div class="text-sm opacity-80">Setup Fee</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-4">
+                        <div class="text-3xl font-bold">1:1000</div>
+                        <div class="text-sm opacity-80">Leverage</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Account Types -->
-    <section id="accounts" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Choose Your Account</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- LiteFinance Card -->
-                <div class="border rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div class="gradient-bg p-8 text-white">
-                        <h3 class="text-2xl font-bold">LiteFinance Account</h3>
-                        <p class="opacity-90 mt-2">Perfect for starting small</p>
-                        <div class="text-3xl font-bold mt-4">$30 Minimum</div>
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">How Copy Trading Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 hover-scale">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
+                        </svg>
                     </div>
-                    <div class="p-8 space-y-4">
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Trade with cents (100 cents = $1)</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Low Minimum Deposit</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Perfect for Beginners</span>
-                        </div>
-                    </div>
+                    <h3 class="text-xl font-bold mb-2">1. Create Account</h3>
+                    <p class="text-gray-600">Sign up with LiteFinance and verify your account in minutes</p>
                 </div>
-
-                <!-- RoboForex Card -->
-                <div class="border rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div class="gradient-bg p-8 text-white">
-                        <h3 class="text-2xl font-bold">RoboForex Account</h3>
-                        <p class="opacity-90 mt-2">For larger investments</p>
-                        <div class="text-3xl font-bold mt-4">$300 Minimum</div>
+                <div class="text-center p-6 hover-scale">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
                     </div>
-                    <div class="p-8 space-y-4">
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Cents Account Support</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Enhanced Features</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Higher Growth Potential</span>
-                        </div>
+                    <h3 class="text-xl font-bold mb-2">2. Fund Account</h3>
+                    <p class="text-gray-600">Deposit as little as $10 using multiple payment methods</p>
+                </div>
+                <div class="text-center p-6 hover-scale">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
                     </div>
+                    <h3 class="text-xl font-bold mb-2">3. Start Copying</h3>
+                    <p class="text-gray-600">Connect to our signal and watch trades copy automatically</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Performance Section -->
-    <section id="performance" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4">Algorithm Development Results</h2>
-            <p class="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-                Verified performance data from our live trading accounts with transparent results
-            </p>
-            
-            <div class="bg-white rounded-xl shadow-lg p-8">
-                <!-- Performance Chart -->
-                <div class="relative">
-                    <div class="absolute top-4 right-4 flex space-x-4">
-                        <button class="text-sm px-3 py-1 rounded-full bg-blue-100 text-blue-600 font-medium">1M</button>
-                        <button class="text-sm px-3 py-1 rounded-full text-gray-500 hover:bg-gray-100">3M</button>
-                        <button class="text-sm px-3 py-1 rounded-full text-gray-500 hover:bg-gray-100">6M</button>
-                        <button class="text-sm px-3 py-1 rounded-full text-gray-500 hover:bg-gray-100">1Y</button>
-                    </div>
-                    <div style="height: 400px; width: 100%;">
-                        <canvas id="performanceChart" class="w-full h-96"></canvas>
-                    </div>
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose LiteFinance</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <h3 class="text-xl font-bold mb-3">Regulated Broker</h3>
+                    <p class="text-gray-600">Trade with a globally regulated broker with 18+ years of experience</p>
                 </div>
-
-                <!-- Verification Links -->
-                <div class="text-center mt-8 mb-12">
-                    <p class="text-2xl font-bold text-gray-800 mb-2">Independently Verified Results</p>
-                    <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-                        Unlike competitors with unverified claims, our performance is transparently verified by trusted third-party platforms
-                    </p>
-                    <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-                        <a href="https://bit.ly/forex-copytrade" target="_blank" 
-                           class="flex items-center space-x-3 text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-8 py-4 rounded-lg transition-all border-2 border-blue-100 hover:border-blue-200">
-                            <span class="font-bold text-lg">LiteFinance Trading Statistics</span>
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                        </a>
-                        <a href="https://www.myfxbook.com/members/allanninal/roboforex/11223711" target="_blank" 
-                           class="flex items-center space-x-3 text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-8 py-4 rounded-lg transition-all border-2 border-blue-100 hover:border-blue-200">
-                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.8l-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4-7 7z"/>
-                            </svg>
-                            <span class="font-bold text-lg">Verified by Myfxbook</span>
-                        </a>
-                    </div>
-                    <p class="text-sm text-gray-500 mt-4">
-                        Click on either link above to view real-time, verified trading performance
-                    </p>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <h3 class="text-xl font-bold mb-3">Low Minimum Deposit</h3>
+                    <p class="text-gray-600">Start with just $10 and scale your investment as you see results</p>
                 </div>
-
-                <!-- Trading Details Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Trading Parameters -->
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold">Trading Parameters</h3>
-                        </div>
-                        <ul class="space-y-3">
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Symbol: XAUUSD
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Timeframe: H1
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Account Type: Cents
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                100 cents = $1
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Risk Management -->
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7m-6 4h4" />
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold">Risk Management</h3>
-                        </div>
-                        <ul class="space-y-3">
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                0.01 lot per 3,000 cents ($30)
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Built-in stop losses
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Dynamic take profit levels
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Maximum exposure limits
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Focus on single instrument (XAUUSD)
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Features -->
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold">Features</h3>
-                        </div>
-                        <ul class="space-y-3">
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Real-time Monitoring
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                24/5 Operation
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Automated Trading
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <svg class="w-4 h-4 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                Conservative Lot Sizing
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <span>Dynamic position sizing</span>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <h3 class="text-xl font-bold mb-3">Advanced Platform</h3>
+                    <p class="text-gray-600">User-friendly copy trading platform with mobile app support</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <h3 class="text-xl font-bold mb-3">Multiple Payment Methods</h3>
+                    <p class="text-gray-600">Deposit and withdraw using cards, bank transfer, and e-wallets</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <h3 class="text-xl font-bold mb-3">24/7 Support</h3>
+                    <p class="text-gray-600">Get help anytime via live chat, email, or phone support</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <h3 class="text-xl font-bold mb-3">Transparent Performance</h3>
+                    <p class="text-gray-600">Monitor real-time statistics and trading history</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4">Simple, Transparent Pricing</h2>
-            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">No hidden fees or complicated structures. We succeed only when you profit.</p>
-            
-            <div class="max-w-lg mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div class="gradient-bg p-8 text-white text-center">
-                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white bg-opacity-20 mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2">Profit Sharing Model</h3>
-                    <p class="opacity-90">Fair and transparent revenue sharing</p>
-                    <div class="text-4xl font-bold mt-6 mb-2">70/30</div>
-                    <p class="text-sm opacity-90">You keep 70% of profits</p>
-                </div>
-                
-                <div class="p-8">
-                    <div class="space-y-6">
-                        <!-- Feature list with improved icons -->
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-semibold">$0 Setup Fee</h4>
-                                <p class="text-sm text-gray-500">No initial costs or hidden charges</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-semibold">No Monthly Fees</h4>
-                                <p class="text-sm text-gray-500">Only pay when you make profits</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-semibold">30% of Profits Only</h4>
-                                <p class="text-sm text-gray-500">Fair share of successful trades</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                </svg>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-semibold">No Profit = No Fee</h4>
-                                <p class="text-sm text-gray-500">We only earn when you earn</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8 pt-6 border-t border-gray-200">
-                        <p class="text-sm text-gray-600 text-center">
-                            Profit sharing is calculated and distributed automatically through your broker
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Frequently Asked Questions -->
-    <section id="faq-section" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-            <div class="max-w-3xl mx-auto space-y-4">
-                <!-- Verification & Performance -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
-                    <button class="w-full px-6 py-4 text-left focus:outline-none" onclick="toggleFAQ(this)">
-                        <div class="flex items-center justify-between">
-                            <span class="font-bold text-gray-800">How do you verify your trading results?</span>
-                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </div>
-                    </button>
-                    <div class="hidden px-6 pb-4 text-gray-600">
-                        <p>Our performance is independently verified through:</p>
-                        <ul class="list-disc ml-5 mt-2 space-y-1">
-                            <li>LiteFinance's official trading statistics platform</li>
-                            <li>Myfxbook - a trusted third-party verification service</li>
-                            <li>Real-time tracking of all trades</li>
-                        </ul>
-                        <p class="mt-2">Unlike many competitors, we provide complete transparency with live tracking of all our trading activities.</p>
-                    </div>
-                </div>
-
-                <!-- Getting Started -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
-                    <button class="w-full px-6 py-4 text-left focus:outline-none" onclick="toggleFAQ(this)">
-                        <div class="flex items-center justify-between">
-                            <span class="font-bold text-gray-800">How quickly can I start, and what's the minimum investment?</span>
-                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </div>
-                    </button>
-                    <div class="hidden px-6 pb-4 text-gray-600">
-                        <p>You can start within 15 minutes with two flexible options:</p>
-                        <ul class="list-disc ml-5 mt-2 space-y-1">
-                            <li>LiteFinance: Start with just $30</li>
-                            <li>RoboForex: Start with $300</li>
-                        </ul>
-                        <p class="mt-2">Both platforms support cents accounts, making it accessible for all investment levels. Our setup process is fully automated and user-friendly.</p>
-                    </div>
-                </div>
-
-                <!-- Profit Sharing -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
-                    <button class="w-full px-6 py-4 text-left focus:outline-none" onclick="toggleFAQ(this)">
-                        <div class="flex items-center justify-between">
-                            <span class="font-bold text-gray-800">How does your profit sharing model work?</span>
-                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </div>
-                    </button>
-                    <div class="hidden px-6 pb-4 text-gray-600">
-                        <p>Our profit sharing model is simple and transparent:</p>
-                        <ul class="list-disc ml-5 mt-2 space-y-1">
-                            <li>You keep 70% of all profits</li>
-                            <li>We receive 30% as our performance fee</li>
-                            <li>No profits = No fees</li>
-                            <li>No hidden charges or monthly fees</li>
-                        </ul>
-                        <p class="mt-2">Profit sharing is handled automatically through your broker's system - we never have direct access to your funds.</p>
-                    </div>
-                </div>
-
-                <!-- Risk Management -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
-                    <button class="w-full px-6 py-4 text-left focus:outline-none" onclick="toggleFAQ(this)">
-                        <div class="flex items-center justify-between">
-                            <span class="font-bold text-gray-800">What risk management measures do you have in place?</span>
-                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </div>
-                    </button>
-                    <div class="hidden px-6 pb-4 text-gray-600">
-                        <p>We employ multiple risk management strategies:</p>
-                        <ul class="list-disc ml-5 mt-2 space-y-1">
-                            <li>Dynamic position sizing using martingale approach</li>
-                            <li>Built-in stop losses on every trade</li>
-                            <li>Dynamic take profit levels</li>
-                            <li>Maximum exposure limits</li>
-                            <li>Focus on single instrument (XAUUSD)</li>
-                        </ul>
-                        <p class="mt-2">Our approach prioritizes capital preservation while seeking consistent returns.</p>
-                    </div>
-                </div>
-
-                <!-- Account Control -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
-                    <button class="w-full px-6 py-4 text-left focus:outline-none" onclick="toggleFAQ(this)">
-                        <div class="flex items-center justify-between">
-                            <span class="font-bold text-gray-800">Do I maintain control of my trading account?</span>
-                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </div>
-                    </button>
-                    <div class="hidden px-6 pb-4 text-gray-600">
-                        <p>Absolutely! You maintain full control of your account:</p>
-                        <ul class="list-disc ml-5 mt-2 space-y-1">
-                            <li>100% control over your funds</li>
-                            <li>Withdraw anytime (subject to broker policies)</li>
-                            <li>Full transparency of all trading activities</li>
-                            <li>We never have direct access to your funds</li>
-                        </ul>
-                        <p class="mt-2">Your funds remain in your broker account at all times, with complete withdrawal rights.</p>
-                    </div>
-                </div>
-
-                <!-- Support -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
-                    <button class="w-full px-6 py-4 text-left focus:outline-none" onclick="toggleFAQ(this)">
-                        <div class="flex items-center justify-between">
-                            <span class="font-bold text-gray-800">What kind of support do you provide?</span>
-                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </div>
-                    </button>
-                    <div class="hidden px-6 pb-4 text-gray-600">
-                        <p>We offer comprehensive support:</p>
-                        <ul class="list-disc ml-5 mt-2 space-y-1">
-                            <li>24/7 customer support via Instagram DM (@goldcopytrading.fx)</li>
-                            <li>Detailed setup guides for both brokers</li>
-                            <li>Regular performance updates</li>
-                            <li>Technical assistance when needed</li>
-                        </ul>
-                        <p class="mt-2">Our team is committed to helping you succeed with our trading system.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Add this JavaScript for FAQ functionality -->
-    <script>
-    function toggleFAQ(element) {
-        // Toggle active state
-        element.classList.toggle('active');
-        
-        // Find the content div
-        const content = element.nextElementSibling;
-        
-        // Toggle visibility
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-            content.classList.add('hidden');
-            element.querySelector('svg').classList.remove('rotate-180');
-        } else {
-            content.classList.remove('hidden');
-            content.style.maxHeight = content.scrollHeight + "px";
-            element.querySelector('svg').classList.add('rotate-180');
-        }
-    }
-    </script>
-
-    <!-- Ready to Start Section -->
-    <section id="start-trading" class="py-16 bg-gradient-to-br from-blue-50 via-white to-blue-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="relative">
-                <!-- Decorative elements -->
-                <div class="absolute inset-0 flex items-center" aria-hidden="true">
-                    <div class="w-full border-t border-gray-200"></div>
-                </div>
-                <div class="relative flex justify-center">
-                    <span class="bg-white px-4 text-sm text-blue-500 font-semibold">GET STARTED TODAY</span>
-                </div>
-            </div>
-
-            <div class="text-center mt-8 mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Start Automated Trading?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-                    Begin your journey with our verified trading system in just three simple steps
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <!-- Step 1 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
-                    <div class="absolute -top-4 left-6 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
-                        1
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 mt-2">Choose Your Broker</h3>
-                    <p class="text-gray-600 mb-4">Select either LiteFinance ($30 min) or RoboForex ($300 min) and create your account</p>
-                    <div class="flex space-x-3">
-                        <img src="logo-litefinance.svg" alt="LiteFinance" class="h-8 object-contain"/>
-                        <img src="roboforex-logo.svg" alt="RoboForex" class="h-8 object-contain"/>
-                    </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
-                    <div class="absolute -top-4 left-6 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
-                        2
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 mt-2">Fund Your Account</h3>
-                    <p class="text-gray-600 mb-4">Deposit funds using your preferred payment method (crypto, card, or bank transfer)</p>
-                    <div class="flex space-x-4">
-                        <!-- Credit Card Icon -->
-                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="4" width="20" height="16" rx="2" fill="#1A56DB"/>
-                            <path d="M2 10H22" stroke="white" stroke-width="2"/>
-                            <path d="M6 15H14" stroke="white" stroke-width="2"/>
-                        </svg>
-                        
-                        <!-- Crypto/Bitcoin Icon -->
-                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="#F7931A">
-                            <path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12zm-.75-17.75h1.5v-3h1.5v3h1.5v-3h1.5v3.25c1.5 0 2.75.75 2.75 2.25 0 1.25-.75 2-1.75 2.25v.25c1.25.25 2.25 1 2.25 2.5 0 1.75-1.5 2.75-3.25 2.75v3h-1.5v-3h-1.5v3h-1.5v-3h-1.5v-1.5h1.5v-7h-1.5v-1.5h1.5v-3zm1.5 4v3.5h2c1 0 1.75-.75 1.75-1.75s-.75-1.75-1.75-1.75h-2zm0 5v3.5h2.25c1.25 0 2-.75 2-1.75s-.75-1.75-2-1.75h-2.25z"/>
-                        </svg>
-                        
-                        <!-- Bank Transfer Icon -->
-                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="#16A34A">
-                            <path d="M12 2L2 8v2h20V8L12 2zm-7 6l7-4 7 4H5zm15 4H4v8h2v-6h12v6h2v-8zM8 16h8v4H8v-4z"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative">
-                    <div class="absolute -top-4 left-6 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
-                        3
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 mt-2">Connect to Our System</h3>
-                    <p class="text-gray-600 mb-4">Follow our simple setup guide to connect your account to our automated trading system</p>
-                    <div class="flex items-center text-blue-600">
-                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                        </svg>
-                        <span class="font-medium">Quick Setup Process</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Section -->
-            <div class="bg-blue-600 rounded-2xl p-8 md:p-12 text-center text-white max-w-4xl mx-auto">
-                <h3 class="text-2xl md:text-3xl font-bold mb-4">Start Your Trading Journey Today</h3>
-                <p class="text-blue-100 mb-8 text-lg">
-                    Join our automated gold trading system with as little as $30
+    <!-- Get Started Section -->
+    <section id="start" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Start Copy Trading?</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    Join thousands of traders who are already copying our successful trades
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="https://bit.ly/forex-copytrade" target="_blank" 
-                       class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium bg-white text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl">
-                        Start with LiteFinance
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
+                    <a href="https://bit.ly/litefinance-register-now" target="_blank"
+                       class="cta-button bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors">
+                        Create Free Account
                     </a>
-                    <a href="https://bit.ly/rf-copytrading" target="_blank"
-                       class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-lg transition-all duration-200">
-                        Start with RoboForex
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                        </svg>
+                    <a href="https://bit.ly/litefinance-copytrade" target="_blank"
+                       class="bg-gray-100 text-gray-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-200 transition-colors">
+                        View Performance
                     </a>
                 </div>
             </div>
@@ -1205,267 +365,39 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300">
-        <!-- Main Footer Content -->
-        <div class="max-w-7xl mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center mb-4">
-                        <img src="goldcopytrading-logo.png" alt="Gold Copy Trading" class="h-8 w-auto mr-3"/>
-                        <span class="text-xl font-bold text-white">Gold Copy Trading</span>
-                    </div>
-                    <p class="text-gray-400 mb-4">
-                        Automated XAUUSD trading with verified performance. Start with just $30 and experience professional-grade trading automation.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://instagram.com/goldcopytrading.fx" target="_blank" 
-                           class="text-gray-400 hover:text-white transition-colors">
-                            <span class="sr-only">Instagram</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="#features-section" class="text-gray-400 hover:text-white transition-colors">Features</a>
-                        </li>
-                        <li>
-                            <a href="#performance" class="text-gray-400 hover:text-white transition-colors">Performance</a>
-                        </li>
-                        <li>
-                            <a href="#faq-section" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="#start-trading" class="text-gray-400 hover:text-white transition-colors">Get Started</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Brokers -->
-                <div>
-                    <h3 class="text-white font-semibold mb-4">Our Brokers</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="https://bit.ly/forex-copytrade" target="_blank" class="text-gray-400 hover:text-white transition-colors">LiteFinance</a>
-                        </li>
-                        <li>
-                            <a href="https://bit.ly/rf-copytrading" target="_blank" class="text-gray-400 hover:text-white transition-colors">RoboForex</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom Bar -->
-        <div class="border-t border-gray-800">
-            <div class="max-w-7xl mx-auto px-4 py-6">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="text-sm text-gray-400">
-                        © 2025 Gold Copy Trading. All rights reserved.
-                    </div>
-                    <div class="mt-4 md:mt-0">
-                        <div class="flex space-x-6 text-sm text-gray-400">
-                            <a href="/privacy-policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-                            <a href="/terms-of-service.html" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-                            <a href="/risk-disclosure.html" class="text-gray-400 hover:text-white transition-colors">Risk Disclosure</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Risk Warning -->
-        <div class="bg-gray-800 py-4">
-            <div class="max-w-7xl mx-auto px-4 text-xs text-gray-500 text-center">
-                <p class="mb-2">
-                    Risk Warning: Trading Forex and CFDs carries a high level of risk to your capital and can result in losses that exceed your deposits. 
-                    Please ensure you fully understand the risks involved before trading.
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 text-sm">
+                    Risk Warning: Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you.
                 </p>
-                <p>
-                    Past performance does not guarantee future results. The trading history presented is less than 5 years and may not suffice as basis for investment decisions.
+                <p class="mt-4 text-gray-400 text-sm">
+                    © 2024 ForexCopyTrading. All rights reserved.
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating CTA -->
-    <div class="fixed bottom-4 right-4 z-50">
-        <a href="#start-trading" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors flex items-center space-x-2">
-            <span>Start Trading</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-        </a>
-    </div>
-
-    <!-- Exit Intent Popup -->
-    <div id="exitPopup" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50">
-        <div class="bg-white rounded-lg max-w-md mx-auto mt-20 p-8 relative">
-            <!-- Add close button -->
-            <button onclick="closeExitPopup()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-            
-            <h3 class="text-2xl font-bold mb-4">Wait! Don't Miss Out!</h3>
-            <p class="mb-6">Start your trading journey today and get access to our proven trading algorithm.</p>
-            <a href="#start-trading" onclick="closeExitPopup()" class="block w-full bg-blue-600 text-white text-center px-6 py-3 rounded-lg">
-                Start Now with $30
-            </a>
-        </div>
-    </div>
-
     <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
         }
 
-        // Animated Counter
-        function animateCounter(el, target, prefix = '', suffix = '') {
-            let current = 0;
-            const increment = target / 50; // Will take 50 steps to reach target
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                el.textContent = prefix + current.toFixed(2).replace(/\.?0+$/, '') + suffix;
-            }, 40);
-        }
-
-        // Initialize Counters
-        document.querySelectorAll('.counter').forEach(counter => {
-            const parent = counter.parentElement;
-            const target = parseFloat(parent.dataset.target);
-            const prefix = parent.dataset.prefix || '';
-            const suffix = parent.dataset.suffix || '';
-            animateCounter(counter, target, prefix, suffix);
-        });
-
-        // Performance Chart
-        const ctx = document.getElementById('performanceChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Nov', 'Dec'],
-                datasets: [
-                    {
-                        label: 'LiteForex Return (%)',
-                        data: [5.65, 19.96],
-                        borderColor: '#00c6ff',
-                        backgroundColor: 'rgba(0, 198, 255, 0.1)',
-                        tension: 0.4,
-                        borderWidth: 2,
-                        pointRadius: 4,
-                        pointHoverRadius: 6
-                    },
-                    {
-                        label: 'RoboForex Return (%)',
-                        data: [10.92, 26.85],
-                        borderColor: '#0072ff',
-                        backgroundColor: 'rgba(0, 114, 255, 0.1)',
-                        tension: 0.4,
-                        borderWidth: 2,
-                        pointRadius: 4,
-                        pointHoverRadius: 6
+        // Smooth scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(anchor.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
                     }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                interaction: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'top',
-                        labels: {
-                            usePointStyle: true,
-                            padding: 20,
-                            font: {
-                                size: 14
-                            }
-                        }
-                    },
-                    tooltip: {
-                        mode: 'index',
-                        intersect: false,
-                        callbacks: {
-                            label: function(context) {
-                                return context.dataset.label + ': ' + context.formattedValue + '%';
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: false,
-                        ticks: {
-                            callback: function(value) {
-                                return value + '%';
-                            }
-                        },
-                        grid: {
-                            drawBorder: false,
-                            color: 'rgba(0, 0, 0, 0.05)'
-                        }
-                    },
-                    x: {
-                        grid: {
-                            drawBorder: false,
-                            display: false
-                        }
-                    }
-                }
-            }
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
+                });
             });
-        });
-
-        document.addEventListener('mouseout', (e) => {
-            if (e.clientY < 0 && !sessionStorage.getItem('popupShown')) {
-                // Show your popup
-                document.getElementById('exitPopup').classList.remove('hidden');
-                sessionStorage.setItem('popupShown', 'true');
-            }
-        });
-
-        // Add close function for exit popup
-        function closeExitPopup() {
-            document.getElementById('exitPopup').classList.add('hidden');
-        }
-
-        // Update exit intent handler to also close when clicking outside
-        document.getElementById('exitPopup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeExitPopup();
-            }
         });
     </script>
 </body>
