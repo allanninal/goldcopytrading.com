@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Enhanced SEO Meta Tags -->
-    <title>ForexCopyTrading | Start Copy Trading with LiteFinance | $10 Min Deposit</title>
+    <title>GoldCopyTrading | Start Copy Trading with LiteFinance | $10 Min Deposit</title>
     <meta name="description" content="Start copy trading forex with just $10 on LiteFinance. Copy professional EURUSD and EURGBP trades with verified performance. Join thousands of successful traders today!">
     <meta name="keywords" content="forex copy trading, social trading, LiteFinance, EURUSD trading, EURGBP trading, forex investment, copy trade forex">
     
     <!-- Add canonical URL -->
-    <link rel="canonical" href="https://www.forexcopytrading.com/" />
+    <link rel="canonical" href="https://www.GoldCopyTrading.com/" />
     
     <!-- Language alternates -->
-    <link rel="alternate" href="https://www.forexcopytrading.com" hreflang="x-default" />
-    <link rel="alternate" href="https://www.forexcopytrading.com" hreflang="en" />
+    <link rel="alternate" href="https://www.GoldCopyTrading.com" hreflang="x-default" />
+    <link rel="alternate" href="https://www.GoldCopyTrading.com" hreflang="en" />
     
     <!-- Open Graph Tags for Social Media -->
     <meta property="og:title" content="Start Copy Trading Forex with LiteFinance | $10 Min Deposit">
     <meta property="og:description" content="Copy professional forex trades automatically through LiteFinance. Start with just $10, no setup fees. Join successful traders today!">
     <meta property="og:image" content="[Your Logo URL]">
-    <meta property="og:url" content="https://www.forexcopytrading.com">
+    <meta property="og:url" content="https://www.GoldCopyTrading.com">
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ForexCopyTrading | Professional Forex Trading">
+    <meta name="twitter:title" content="GoldCopyTrading | Professional Forex Trading">
     <meta name="twitter:description" content="Copy professional forex trades automatically. Start with $10. Verified by LiteFinance.">
     
     <!-- Google Tag Manager -->
@@ -158,6 +158,14 @@
             70% { box-shadow: 0 0 0 10px rgba(0,114,255, 0); }
             100% { box-shadow: 0 0 0 0 rgba(0,114,255, 0); }
         }
+        
+        /* Added styles for dropdown behavior */
+        .group:hover .absolute {
+            display: block;
+        }
+        .absolute {
+            display: none;
+        }
     </style>
 
     <!-- Schema Markup for Rich Snippets -->
@@ -165,8 +173,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "ForexCopyTrading Algorithm",
-        "url": "https://www.forexcopytrading.com",
+        "name": "GoldCopyTrading Algorithm",
+        "url": "https://www.GoldCopyTrading.com",
         "description": "Automated EURUSD trading algorithm with cents account support",
         "offers": {
             "@type": "AggregateOffer",
@@ -174,7 +182,7 @@
             "highPrice": "100",
             "priceCurrency": "USD",
             "offerCount": "2",
-            "url": "https://www.forexcopytrading.com/#start"
+            "url": "https://www.GoldCopyTrading.com/#start"
         }
     }
     </script>
@@ -194,38 +202,93 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm fixed w-full z-50">
+    <nav class="bg-white shadow-lg fixed w-full z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between h-20">
+                <!-- Logo -->
                 <div class="flex items-center">
-                    <span class="text-2xl font-bold text-blue-600">ForexCopyTrading</span>
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <span class="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">GoldCopyTrading</span>
+                    </a>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#how-it-works" class="text-gray-600 hover:text-blue-600">How It Works</a>
-                    <a href="#benefits" class="text-gray-600 hover:text-blue-600">Benefits</a>
-                    <a href="#start" class="text-gray-600 hover:text-blue-600">Get Started</a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <!-- Main Navigation -->
+                    <div class="flex space-x-6">
+                        <a href="index.html#how-it-works" class="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium">How It Works</a>
+                        <a href="index.html#benefits" class="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium">Benefits</a>
+                        <a href="index.html#start" class="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium">Get Started</a>
+                    </div>
+
+                    <!-- Analysis Links -->
+                    <div class="flex space-x-6 border-l pl-6">
+                        <div class="group relative">
+                            <button class="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium flex items-center">
+                                Analysis
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <!-- Added negative top margin and padding-top to create hoverable area -->
+                            <div class="absolute left-0 mt-0 w-48">
+                                <!-- Added invisible bridge with padding -->
+                                <div class="invisible h-2"></div>
+                                <!-- Actual dropdown content -->
+                                <div class="bg-white rounded-lg shadow-lg py-2">
+                                    <a href="ethusd-technical-analysis.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">ETH/USD Analysis</a>
+                                    <a href="btcusd-technical-analysis.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">BTC/USD Analysis</a>
+                                    <a href="solusd-technical-analysis.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">SOL/USD Analysis</a>
+                                    <a href="xrpusd-technical-analysis.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">XRP/USD Analysis</a>
+                                    <a href="adausd-technical-analysis.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">ADA/USD Analysis</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
                     <a href="https://bit.ly/litefinance-register-now" target="_blank" 
-                       class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                       class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-200 transform hover:scale-105 font-semibold shadow-md hover:shadow-lg">
                         Open Account
                     </a>
                 </div>
-                <div class="md:hidden flex items-center">
-                    <button onclick="toggleMobileMenu()" class="text-gray-600">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16" class="block"></path>
+                            <path id="closeIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" class="hidden"></path>
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
+
         <!-- Mobile menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#how-it-works" class="block px-3 py-2 text-gray-600">How It Works</a>
-                <a href="#benefits" class="block px-3 py-2 text-gray-600">Benefits</a>
-                <a href="#start" class="block px-3 py-2 text-gray-600">Get Started</a>
-                <a href="https://bit.ly/litefinance-register-now" target="_blank" 
-                   class="block px-3 py-2 text-blue-600 font-medium">Open Account</a>
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html#how-it-works" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200">How It Works</a>
+                <a href="index.html#benefits" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200">Benefits</a>
+                <a href="index.html#start" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200">Get Started</a>
+                
+                <!-- Analysis Section -->
+                <div class="border-t border-gray-100 pt-3">
+                    <p class="px-3 py-2 text-sm font-semibold text-gray-400">Technical Analysis</p>
+                    <a href="ethusd-technical-analysis.html" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200">ETH/USD Analysis</a>
+                    <a href="btcusd-technical-analysis.html" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200">BTC/USD Analysis</a>
+                    <a href="solusd-technical-analysis.html" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200">SOL/USD Analysis</a>
+                    <a href="xrpusd-technical-analysis.html" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200">XRP/USD Analysis</a>
+                    <a href="adausd-technical-analysis.html" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200">ADA/USD Analysis</a>
+                </div>
+
+                <!-- Mobile CTA -->
+                <div class="pt-3">
+                    <a href="https://bit.ly/litefinance-register-now" target="_blank" 
+                       class="block w-full text-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-200 font-semibold shadow-md">
+                        Open Account
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -372,7 +435,7 @@
                     Risk Warning: Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you.
                 </p>
                 <p class="mt-4 text-gray-400 text-sm">
-                    © 2024 ForexCopyTrading. All rights reserved.
+                    © 2024 GoldCopyTrading. All rights reserved.
                 </p>
             </div>
         </div>
@@ -382,16 +445,52 @@
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+            
             menu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
         }
 
-        // Smooth scroll
+        // Hide mobile menu on window resize if screen becomes large
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) { // lg breakpoint
+                const menu = document.getElementById('mobileMenu');
+                const menuIcon = document.getElementById('menuIcon');
+                const closeIcon = document.getElementById('closeIcon');
+                
+                menu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        });
+
+        // Add scroll behavior to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 0) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Smooth scroll for navigation links
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', (e) => {
                     e.preventDefault();
                     const target = document.querySelector(anchor.getAttribute('href'));
                     if (target) {
+                        // Close mobile menu if open
+                        const menu = document.getElementById('mobileMenu');
+                        const menuIcon = document.getElementById('menuIcon');
+                        const closeIcon = document.getElementById('closeIcon');
+                        menu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                        
                         target.scrollIntoView({
                             behavior: 'smooth'
                         });
