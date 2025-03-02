@@ -36,20 +36,56 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm fixed w-full z-50">
+    <!-- Navigation Menu -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
+                <!-- Logo -->
                 <div class="flex items-center">
-                    <a href="index.html" class="text-2xl font-bold text-blue-600">GoldCopyTrading</a>
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <span class="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">GoldCopyTrading</span>
+                    </a>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#how-it-works" class="text-gray-600 hover:text-blue-600">How It Works</a>
-                    <a href="index.html#benefits" class="text-gray-600 hover:text-blue-600">Benefits</a>
-                    <a href="index.html#start" class="text-gray-600 hover:text-blue-600">Get Started</a>
+
+                <!-- Crypto Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <div class="flex space-x-4">
+                        <a href="btcusd-technical-analysis.html" class="text-gray-600 px-3 py-2 rounded-md hover:bg-blue-50 hover:text-blue-600">BTC/USD</a>
+                        <a href="ethusd-technical-analysis.html" class="text-gray-600 px-3 py-2 rounded-md hover:bg-blue-50 hover:text-blue-600">ETH/USD</a>
+                        <a href="solusd-technical-analysis.html" class="text-blue-600 font-semibold px-3 py-2 rounded-md hover:bg-blue-50">SOL/USD</a>
+                        <a href="xrpusd-technical-analysis.html" class="text-gray-600 px-3 py-2 rounded-md hover:bg-blue-50 hover:text-blue-600">XRP/USD</a>
+                        <a href="adausd-technical-analysis.html" class="text-gray-600 px-3 py-2 rounded-md hover:bg-blue-50 hover:text-blue-600">ADA/USD</a>
+                    </div>
                     <a href="https://bit.ly/litefinance-register-now" target="_blank" 
-                       class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                        Open Account
+                       class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all duration-200 transform hover:scale-105 font-semibold shadow-md hover:shadow-lg">
+                        Start Trading
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16" class="block"></path>
+                            <path id="closeIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" class="hidden"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-3 space-y-2">
+                <a href="btcusd-technical-analysis.html" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg">BTC/USD Analysis</a>
+                <a href="ethusd-technical-analysis.html" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg">ETH/USD Analysis</a>
+                <a href="solusd-technical-analysis.html" class="block px-3 py-2 text-blue-600 font-semibold rounded-lg bg-blue-50">SOL/USD Analysis</a>
+                <a href="xrpusd-technical-analysis.html" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg">XRP/USD Analysis</a>
+                <a href="adausd-technical-analysis.html" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg">ADA/USD Analysis</a>
+                <div class="pt-3">
+                    <a href="https://bit.ly/litefinance-register-now" target="_blank" 
+                       class="block w-full text-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-200 font-semibold shadow-md">
+                        Start Trading
                     </a>
                 </div>
             </div>
@@ -460,5 +496,31 @@
             </div>
         </div>
     </footer>
+
+    <!-- Add JavaScript for mobile menu -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+            
+            menu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        }
+
+        // Hide mobile menu on window resize if screen becomes large
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) { // lg breakpoint
+                const menu = document.getElementById('mobileMenu');
+                const menuIcon = document.getElementById('menuIcon');
+                const closeIcon = document.getElementById('closeIcon');
+                
+                menu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html> 
