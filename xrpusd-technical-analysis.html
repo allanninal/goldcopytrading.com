@@ -401,120 +401,112 @@
             </section>
 
             <!-- Trading Strategy -->
-            <section class="mb-12 bg-white rounded-lg shadow-sm p-6">
+            <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-6">Trading Strategy</h2>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Short-Term Trading Card -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-blue-400">
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-4">
+                            <h3 class="text-xl font-bold text-blue-600 mb-2">Short-Term Traders</h3>
+                            <p class="text-sm text-gray-600">(1-3 days)</p>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Entry Strategy:</h4>
+                                <p class="text-gray-600">Watch for potential bounce near $2.65 support with confirmation signals</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Stop Loss:</h4>
+                                <p class="text-gray-600">Place stops below $2.55</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Take Profit Targets:</h4>
+                                <ul class="list-disc list-inside text-gray-600 pl-2">
+                                    <li>TP1: $2.85 (recent resistance)</li>
+                                    <li>TP2: $2.95 (extension target)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Risk Management:</h4>
+                                <p class="text-gray-600">Risk no more than 1.5% of capital per trade with a 1:2 risk-reward ratio</p>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Short-Term Trading -->
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-600">For Short-Term Traders (1-3 days)</h3>
-                    <div class="space-y-4 text-gray-700">
-                        <div>
-                            <p class="font-medium mb-2">Entry Strategy:</p>
-                            <p>Watch for potential bounce near $2.65 support with confirmation signals</p>
+                    <!-- Swing Trading Card -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-purple-400">
+                        <div class="bg-gradient-to-r from-purple-50 to-white p-4">
+                            <h3 class="text-xl font-bold text-purple-600 mb-2">Swing Traders</h3>
+                            <p class="text-sm text-gray-600">(1-2 weeks)</p>
                         </div>
-                        <div>
-                            <p class="font-medium mb-2">Stop Loss:</p>
-                            <p>Place stops below $2.55 (below immediate support)</p>
+                        <div class="p-6 space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Entry Strategy:</h4>
+                                <p class="text-gray-600">Consider entries after:</p>
+                                <ul class="list-disc list-inside text-gray-600 pl-2">
+                                    <li>Price stabilization above $2.65</li>
+                                    <li>Positive RSI divergence on 4H chart</li>
+                                    <li>Increased buying volume</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Stop Loss:</h4>
+                                <p class="text-gray-600">Place stops below $2.45</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Take Profit Targets:</h4>
+                                <ul class="list-disc list-inside text-gray-600 pl-2">
+                                    <li>TP1: $2.95</li>
+                                    <li>TP2: $3.10</li>
+                                    <li>TP3: $3.25</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Risk Management:</h4>
+                                <p class="text-gray-600">Risk no more than 2% of capital with 1:3 risk-reward ratio</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="font-medium mb-2">Take Profit Targets:</p>
-                            <ul class="list-disc list-inside pl-4">
-                                <li>TP1: $2.85 (immediate resistance)</li>
-                                <li>TP2: $2.95 (key resistance level)</li>
-                            </ul>
+                    </div>
+
+                    <!-- Position Trading Card -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-green-400">
+                        <div class="bg-gradient-to-r from-green-50 to-white p-4">
+                            <h3 class="text-xl font-bold text-green-600 mb-2">Position Traders</h3>
+                            <p class="text-sm text-gray-600">(1-3 months)</p>
                         </div>
-                        <div>
-                            <p class="font-medium mb-2">Risk Management:</p>
-                            <p>Risk no more than 1.5% of capital per trade with 1:2 risk-reward ratio</p>
+                        <div class="p-6 space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Strategy:</h4>
+                                <p class="text-gray-600">Maintain neutral to bearish bias while price remains below $2.85</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Entry Zones:</h4>
+                                <ul class="list-disc list-inside text-gray-600 pl-2">
+                                    <li>Primary accumulation zone at $2.45-$2.55</li>
+                                    <li>Secondary entries on breakout confirmation above $2.85</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Stop Loss:</h4>
+                                <p class="text-gray-600">Below $2.35</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Take Profit:</h4>
+                                <p class="text-gray-600">Scale out at key psychological levels:</p>
+                                <ul class="list-disc list-inside text-gray-600 pl-2">
+                                    <li>$3.10</li>
+                                    <li>$3.50</li>
+                                    <li>$4.00</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Risk Management:</h4>
+                                <p class="text-gray-600">Allocate no more than 5% of portfolio to XRP positions, using staged entries</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Swing Trading -->
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-600">For Swing Traders (1-2 weeks)</h3>
-                    <div class="space-y-4 text-gray-700">
-                        <div>
-                            <p class="font-medium mb-2">Entry Strategy:</p>
-                            <p>Consider entries after:</p>
-                            <ul class="list-disc list-inside pl-4">
-                                <li>Price stabilization above $2.65</li>
-                                <li>Positive RSI divergence on 4H chart</li>
-                                <li>Increased buying volume</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="font-medium mb-2">Stop Loss:</p>
-                            <p>Place stops below $2.45 (major support zone)</p>
-                        </div>
-                        <div>
-                            <p class="font-medium mb-2">Take Profit Targets:</p>
-                            <ul class="list-disc list-inside pl-4">
-                                <li>TP1: $2.95 (key resistance)</li>
-                                <li>TP2: $3.10 (major resistance zone)</li>
-                                <li>TP3: $3.25 (for partial position)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Position Trading -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 text-blue-600">For Position Traders (1-3 months)</h3>
-                    <div class="space-y-4 text-gray-700">
-                        <div>
-                            <p class="font-medium mb-2">Strategy:</p>
-                            <p>Maintain neutral to bearish bias while price remains below $2.85, look for accumulation opportunities on significant dips</p>
-                        </div>
-                        <div>
-                            <p class="font-medium mb-2">Entry Zones:</p>
-                            <ul class="list-disc list-inside pl-4">
-                                <li>Primary accumulation zone: $2.45-$2.55</li>
-                                <li>Secondary entries: On breakout confirmation above $2.85</li>
-                                <li>Scale-in approach recommended given current volatility</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="font-medium mb-2">Stop Loss:</p>
-                            <p>Consider portfolio stops below $2.35 (major trend invalidation)</p>
-                        </div>
-                        <div>
-                            <p class="font-medium mb-2">Take Profit:</p>
-                            <p>Scale out at key psychological levels:</p>
-                            <ul class="list-disc list-inside pl-4">
-                                <li>First target: $3.10 (30% position)</li>
-                                <li>Second target: $3.50 (40% position)</li>
-                                <li>Final target: $4.00 (remaining position)</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="font-medium mb-2">Risk Management:</p>
-                            <p>Allocate no more than 5% of portfolio to XRP positions, use staged entries to manage risk</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Market Structure Analysis -->
-                <section class="mb-12 bg-white rounded-lg shadow-sm p-6">
-                    <h2 class="text-2xl font-bold mb-4">Market Structure Analysis</h2>
-                    <div class="space-y-4 text-gray-700 leading-relaxed">
-                        <p>
-                            XRP/USD has shown significant weakness with a -5.49% decline on the 4-hour timeframe, indicating increased selling pressure. The current price action suggests a potential shift in market structure, with bears gaining control below key moving averages.
-                        </p>
-                        <p>
-                            Key support at $2.65 and $2.55 will be crucial for maintaining the current market structure. A break below these levels could accelerate the downside momentum. The increased volume on recent declines suggests strong participation in the current move.
-                        </p>
-                        <p>
-                            Traders should pay particular attention to the following structural elements:
-                        </p>
-                        <ul class="list-disc pl-6 space-y-2">
-                            <li>Break of short-term uptrend support</li>
-                            <li>Formation of lower highs and lower lows on multiple timeframes</li>
-                            <li>Increased selling volume confirming bearish pressure</li>
-                            <li>Key support levels acting as potential reversal zones</li>
-                        </ul>
-                    </div>
-                </section>
             </section>
 
             <!-- Second CTA Section -->
