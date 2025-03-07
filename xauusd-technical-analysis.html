@@ -1777,19 +1777,104 @@
         };
     </script>
 
-    <!-- Quick Access Trading Menu -->
-    <div id="quickAccessPanel" class="hidden absolute bottom-20 right-0 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-xl w-80 overflow-hidden border-2 border-yellow-500">
-        <!-- Panel Header -->
-        <div class="bg-gradient-to-r from-yellow-600 to-yellow-700 text-white p-4">
-            <h3 class="text-lg font-bold">Quick Trading Info</h3>
-        </div>
+    <!-- Quick Access Trading Menu (Floating) -->
+    <div id="quickAccessMenu" class="fixed bottom-6 right-6 z-50">
+        <!-- Main FAB Button -->
+        <button onclick="toggleQuickMenu()" class="bg-gradient-to-r from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center w-16 h-16">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+        </button>
 
-        <!-- Trading Scenarios Tabs -->
-        <div class="border-b border-yellow-500">
-            <nav class="flex" aria-label="Tabs">
-                <button onclick="showScenario('bullish')" class="scenario-tab active w-1/2 py-2 px-4 text-center border-b-2 border-yellow-500 text-yellow-500 font-medium">Bullish</button>
-                <button onclick="showScenario('bearish')" class="scenario-tab w-1/2 py-2 px-4 text-center border-b-2 border-transparent text-gray-400 hover:text-gray-300 font-medium">Bearish</button>
-            </nav>
+        <!-- Quick Access Panel -->
+        <div id="quickAccessPanel" class="hidden absolute bottom-20 right-0 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-xl w-80 overflow-hidden border-2 border-yellow-500">
+            <!-- Panel Header -->
+            <div class="bg-gradient-to-r from-yellow-600 to-yellow-700 text-white p-4">
+                <h3 class="text-lg font-bold">Quick Trading Info</h3>
+            </div>
+
+            <!-- Trading Scenarios Tabs -->
+            <div class="border-b border-yellow-500">
+                <nav class="flex" aria-label="Tabs">
+                    <button onclick="showScenario('bullish')" class="scenario-tab active w-1/2 py-2 px-4 text-center border-b-2 border-yellow-500 text-yellow-500 font-medium">Bullish</button>
+                    <button onclick="showScenario('bearish')" class="scenario-tab w-1/2 py-2 px-4 text-center border-b-2 border-transparent text-gray-400 hover:text-gray-300 font-medium">Bearish</button>
+                </nav>
+            </div>
+
+            <!-- Bullish Scenario Content -->
+            <div id="bullishScenario" class="scenario-content p-4">
+                <div class="space-y-3 text-white">
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">Entry:</span>
+                        <span class="text-green-400">$2,920-2,925</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">Stop Loss:</span>
+                        <span class="text-green-400">$2,905</span>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="font-medium">Take Profit:</span>
+                        <div class="ml-4">
+                            <div class="flex justify-between">
+                                <span>TP1 (50%):</span>
+                                <span class="text-green-400">$2,940</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>TP2 (30%):</span>
+                                <span class="text-green-400">$2,960</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>TP3 (20%):</span>
+                                <span class="text-green-400">$2,980</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-sm text-gray-300">
+                        <p>Trigger: NFP below 159K</p>
+                        <p>Confirmation: Strong volume, RSI > 60</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bearish Scenario Content -->
+            <div id="bearishScenario" class="scenario-content hidden p-4">
+                <div class="space-y-3 text-white">
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">Entry:</span>
+                        <span class="text-red-400">$2,885-2,890</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">Stop Loss:</span>
+                        <span class="text-red-400">$2,905</span>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="font-medium">Take Profit:</span>
+                        <div class="ml-4">
+                            <div class="flex justify-between">
+                                <span>TP1 (50%):</span>
+                                <span class="text-red-400">$2,870</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>TP2 (30%):</span>
+                                <span class="text-red-400">$2,850</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>TP3 (20%):</span>
+                                <span class="text-red-400">$2,830</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-sm text-gray-300">
+                        <p>Trigger: NFP above 180K</p>
+                        <p>Confirmation: Strong volume, RSI < 40</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="border-t border-yellow-500 p-4 bg-gray-800">
+                <a href="#trading-strategy" class="block text-center text-yellow-500 hover:text-yellow-400 font-medium">View Full Strategy</a>
+            </div>
         </div>
     </div>
 
@@ -1812,13 +1897,13 @@
             
             // Update tab styles
             document.querySelectorAll('.scenario-tab').forEach(tab => {
-                tab.classList.remove('border-blue-600', 'text-blue-600');
-                tab.classList.add('border-transparent', 'text-gray-500');
+                tab.classList.remove('border-yellow-500', 'text-yellow-500');
+                tab.classList.add('border-transparent', 'text-gray-400');
             });
             
             // Highlight active tab
-            event.currentTarget.classList.remove('border-transparent', 'text-gray-500');
-            event.currentTarget.classList.add('border-blue-600', 'text-blue-600');
+            event.currentTarget.classList.remove('border-transparent', 'text-gray-400');
+            event.currentTarget.classList.add('border-yellow-500', 'text-yellow-500');
         }
 
         // Close panel when clicking outside
