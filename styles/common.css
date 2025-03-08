@@ -1,0 +1,156 @@
+/* Critical CSS */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-top: 1.5em;
+}
+
+.analysis-date {
+    color: #666;
+    font-style: italic;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f5f5f5;
+}
+
+.disclaimer {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+.key-levels {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.price-highlight {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+/* Performance optimized animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+    70% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+.pulse-effect {
+    animation: pulse 2s infinite;
+    will-change: transform, box-shadow;
+}
+
+/* Mobile optimizations */
+@media (prefers-reduced-motion: reduce) {
+    .pulse-effect {
+        animation: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .cta-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Promotional sections */
+.promo-section {
+    @apply mb-12 rounded-lg shadow-lg p-8;
+}
+
+.promo-primary {
+    @apply bg-gradient-to-r text-white;
+}
+
+.promo-light {
+    @apply bg-gradient-to-r;
+}
+
+/* Theme variables usage classes */
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.border-primary {
+    border-color: var(--primary-color);
+}
+
+.hover-primary:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Quick Access Menu styles */
+.quick-access-button {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-color-dark));
+    color: #fff;
+}
+
+.quick-access-panel {
+    border: 1px solid var(--primary-color);
+}
+
+/* Chart styles */
+.chart-container {
+    border: 1px solid var(--primary-color-dark);
+    background: rgba(var(--primary-rgb), 0.05);
+}
+
+/* Price indicator styles */
+.price-indicator {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-color-dark));
+    color: #000;
+    font-weight: bold;
+}
+
+/* Support/Resistance level styles */
+.support-level {
+    border-left: 4px solid #006400;
+}
+
+.resistance-level {
+    border-left: 4px solid #8B0000;
+} 
