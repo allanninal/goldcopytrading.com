@@ -111,6 +111,7 @@
         
         h1, h2, h3, h4 {
             color: var(--primary-color-dark) !important;
+            margin-top: 1.5em !important;
         }
         
         .price-highlight {
@@ -150,6 +151,69 @@
         /* Enhanced promotional sections for XRP theme */
         .promo-section-xrp {
             background: linear-gradient(135deg, var(--primary-color-dark) 0%, var(--primary-color) 100%);
+        }
+        
+        /* Chart image styling */
+        .chart-container {
+            position: relative;
+            margin: 30px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border: 1px solid rgba(var(--primary-rgb), 0.2);
+        }
+        
+        .chart-header {
+            background: linear-gradient(to right, var(--primary-color-dark), var(--primary-color));
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chart-timeframe {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        
+        .chart-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .chart-image:hover {
+            transform: scale(1.01);
+        }
+        
+        .chart-caption {
+            padding: 12px 15px;
+            background-color: rgba(var(--primary-rgb), 0.05);
+            font-size: 0.9em;
+            color: #555;
+            border-top: 1px solid rgba(var(--primary-rgb), 0.1);
+        }
+        
+        .chart-indicator {
+            display: inline-block;
+            margin-right: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            background: rgba(var(--primary-rgb), 0.1);
+            color: var(--primary-color-dark);
+        }
+        
+        @media (min-width: 768px) {
+            .chart-container {
+                margin: 40px 0;
+            }
         }
     </style>
     
@@ -303,6 +367,20 @@
 
     <h2>Multi-Timeframe Analysis</h2>
 
+    <div class="chart-container">
+        <div class="chart-header">
+            <span>XRP/USD Technical Chart</span>
+            <span class="chart-timeframe">15-Minute</span>
+        </div>
+        <img src="LF_XRPUSD_08_03_2025-15M.png" alt="XRP/USD 15-Minute Chart" class="chart-image" loading="lazy">
+        <div class="chart-caption">
+            <span class="chart-indicator">EMA: 2.3604</span>
+            <span class="chart-indicator">Stochastic: 75.68</span>
+            <span class="chart-indicator">Vol: Below Avg</span>
+            <span class="chart-indicator">Price: $2.35783</span>
+        </div>
+    </div>
+
     <h3>15-Minute Chart (Short-Term)</h3>
     <ul>
         <li><strong>Price Action</strong>: XRP/USD trading at $2.35783 with moderate volatility</li>
@@ -311,6 +389,20 @@
         <li><strong>Stochastic Oscillator</strong>: Readings 75.6851/77.1812 indicating slight overbought conditions but with potential remaining momentum</li>
         <li><strong>Volume</strong>: Below average, typical of consolidation phase</li>
     </ul>
+
+    <div class="chart-container">
+        <div class="chart-header">
+            <span>XRP/USD Technical Chart</span>
+            <span class="chart-timeframe">1-Hour</span>
+        </div>
+        <img src="LF_XRPUSD_08_03_2025-1H.png" alt="XRP/USD 1-Hour Chart" class="chart-image" loading="lazy">
+        <div class="chart-caption">
+            <span class="chart-indicator">EMAs: 2.4097/2.4574</span>
+            <span class="chart-indicator">MACD: -0.0047</span>
+            <span class="chart-indicator">Stoch: 14.00</span>
+            <span class="chart-indicator">Range: $2.35-$2.37</span>
+        </div>
+    </div>
 
     <h3>1-Hour Chart (Medium-Term)</h3>
     <ul>
@@ -321,6 +413,20 @@
         <li><strong>Volume</strong>: Declining, indicating diminishing selling pressure</li>
     </ul>
 
+    <div class="chart-container">
+        <div class="chart-header">
+            <span>XRP/USD Technical Chart</span>
+            <span class="chart-timeframe">4-Hour</span>
+        </div>
+        <img src="LF_XRPUSD_08_03_2025-4H.png" alt="XRP/USD 4-Hour Chart" class="chart-image" loading="lazy">
+        <div class="chart-caption">
+            <span class="chart-indicator">EMAs: 2.4531/2.4588</span>
+            <span class="chart-indicator">RSI: 42.15</span>
+            <span class="chart-indicator">BBands: 2.6280/2.4829/2.3377</span>
+            <span class="chart-indicator">Bearish Bias</span>
+        </div>
+    </div>
+
     <h3>4-Hour Chart (Longer-Term)</h3>
     <ul>
         <li><strong>Price Action</strong>: Trading above recent lows but below key EMAs</li>
@@ -329,6 +435,20 @@
         <li><strong>RSI</strong>: Reading of 42.1486, in neutral territory with slight bearish bias</li>
         <li><strong>Volume</strong>: Spikes on price rebounds, showing accumulation on dips</li>
     </ul>
+
+    <div class="chart-container">
+        <div class="chart-header">
+            <span>XRP/USD Technical Chart</span>
+            <span class="chart-timeframe">Daily</span>
+        </div>
+        <img src="LF_XRPUSD_08_03_2025-1D.png" alt="XRP/USD Daily Chart" class="chart-image" loading="lazy">
+        <div class="chart-caption">
+            <span class="chart-indicator">EMAs: 50/200 = 2.5070/1.8470</span>
+            <span class="chart-indicator">RSI: 46.36</span>
+            <span class="chart-indicator">ADX: 23.82</span>
+            <span class="chart-indicator">Uptrend with Correction</span>
+        </div>
+    </div>
 
     <h3>Daily Chart (Primary Trend)</h3>
     <ul>
