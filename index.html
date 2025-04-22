@@ -653,10 +653,19 @@
         <div class="container hero-content">
             <h1>Copy Top Traders Automatically</h1>
             <p>Select from verified traders based on performance, risk level, and trading style. Let LiteFinance copy every trade for you with minimal investment.</p>
-            <div class="cta-buttons" style="margin-top: 30px;">
-                <a href="https://my.litefinance.org/traders?type=total_equity&uid=135262069" class="btn">Popular Copy Traders</a>
-                <a href="https://my.litefinance.org/traders?type=profit&uid=135262069" class="btn">High Profitability</a>
-                <a href="https://my.litefinance.org/traders?type=risk&uid=135262069" class="btn">Minimal Risk</a>
+            <div class="cta-buttons" style="margin-top: 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+                <a href="https://my.litefinance.org/traders?type=total_equity&uid=135262069" class="btn" style="display: flex; align-items: center; background-color: #d4af37; color: #1a1a1a; border-radius: 4px; padding: 15px 25px; min-width: 250px; justify-content: center; font-weight: 600;">
+                    <i class="fas fa-users" style="margin-right: 10px; font-size: 1.2rem;"></i>
+                    Popular Copy Traders
+                </a>
+                <a href="https://my.litefinance.org/traders?type=profit&uid=135262069" class="btn" style="display: flex; align-items: center; background-color: #d4af37; color: #1a1a1a; border-radius: 4px; padding: 15px 25px; min-width: 250px; justify-content: center; font-weight: 600;">
+                    <i class="fas fa-chart-line" style="margin-right: 10px; font-size: 1.2rem;"></i>
+                    High Profitability
+                </a>
+                <a href="https://my.litefinance.org/traders?type=risk&uid=135262069" class="btn" style="display: flex; align-items: center; background-color: #d4af37; color: #1a1a1a; border-radius: 4px; padding: 15px 25px; min-width: 250px; justify-content: center; font-weight: 600;">
+                    <i class="fas fa-shield-alt" style="margin-right: 10px; font-size: 1.2rem;"></i>
+                    Minimal Risk
+                </a>
             </div>
         </div>
     </section>
@@ -699,14 +708,52 @@
                             <div class="metric-value">20-80</div>
                         </div>
                     </div>
-                    <div style="margin-top: 30px; text-align: center;">
-                        <p style="margin-bottom: 30px; color: var(--white);">Browse hundreds of verified traders specializing in various markets. Choose traders based on their performance history, risk level, and trading style that matches your financial goals.</p>
-                        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                            <a href="https://my.litefinance.org/traders?type=total_equity&uid=135262069" class="btn">Find Popular Traders</a>
-                            <a href="https://my.litefinance.org/traders?type=profit&uid=135262069" class="btn btn-secondary">High Profit Traders</a>
-                        </div>
-                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trader Categories Section -->
+    <section id="trader-categories" style="background-color: var(--dark); padding: 80px 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Choose Your Trading Strategy</h2>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+                <!-- Popular Traders -->
+                <a href="https://my.litefinance.org/traders?type=total_equity&uid=135262069" style="text-decoration: none; flex: 1; min-width: 250px; max-width: 400px;">
+                    <div style="background-color: #1a1a1a; border: 2px solid #d4af37; border-radius: 8px; padding: 25px; text-align: center; transition: transform 0.3s ease;">
+                        <div style="background-color: #d4af37; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-users" style="font-size: 36px; color: #1a1a1a;"></i>
+                        </div>
+                        <h3 style="color: #d4af37; font-size: 1.8rem; margin-bottom: 15px;">Popular Copy Traders</h3>
+                        <p style="color: #fff; margin-bottom: 25px;">Join hundreds of other investors copying the most followed and trusted traders on the platform.</p>
+                        <div style="display: inline-block; background-color: #d4af37; color: #1a1a1a; padding: 10px 20px; border-radius: 4px; font-weight: 600;">Browse Popular Traders</div>
+                    </div>
+                </a>
+                
+                <!-- High Profit Traders -->
+                <a href="https://my.litefinance.org/traders?type=profit&uid=135262069" style="text-decoration: none; flex: 1; min-width: 250px; max-width: 400px;">
+                    <div style="background-color: #1a1a1a; border: 2px solid #d4af37; border-radius: 8px; padding: 25px; text-align: center; transition: transform 0.3s ease;">
+                        <div style="background-color: #d4af37; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-chart-line" style="font-size: 36px; color: #1a1a1a;"></i>
+                        </div>
+                        <h3 style="color: #d4af37; font-size: 1.8rem; margin-bottom: 15px;">High Profitability</h3>
+                        <p style="color: #fff; margin-bottom: 25px;">Focus on maximum returns with traders who have demonstrated exceptional profit percentages.</p>
+                        <div style="display: inline-block; background-color: #d4af37; color: #1a1a1a; padding: 10px 20px; border-radius: 4px; font-weight: 600;">Browse High Profit Traders</div>
+                    </div>
+                </a>
+                
+                <!-- Low Risk Traders -->
+                <a href="https://my.litefinance.org/traders?type=risk&uid=135262069" style="text-decoration: none; flex: 1; min-width: 250px; max-width: 400px;">
+                    <div style="background-color: #1a1a1a; border: 2px solid #d4af37; border-radius: 8px; padding: 25px; text-align: center; transition: transform 0.3s ease;">
+                        <div style="background-color: #d4af37; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-shield-alt" style="font-size: 36px; color: #1a1a1a;"></i>
+                        </div>
+                        <h3 style="color: #d4af37; font-size: 1.8rem; margin-bottom: 15px;">Minimal Risk</h3>
+                        <p style="color: #fff; margin-bottom: 25px;">Sleep better at night with traders who prioritize capital preservation and steady growth.</p>
+                        <div style="display: inline-block; background-color: #d4af37; color: #1a1a1a; padding: 10px 20px; border-radius: 4px; font-weight: 600;">Browse Low Risk Traders</div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -727,10 +774,16 @@
                     <div class="step-number">2</div>
                     <h3>Choose Traders</h3>
                     <p>Browse and select from verified trading signals with proven track records. Filter by performance, risk level, or trading style.</p>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <a href="https://my.litefinance.org/traders?type=total_equity&uid=135262069" class="btn btn-secondary" style="font-size: 0.9rem;">Popular</a>
-                        <a href="https://my.litefinance.org/traders?type=profit&uid=135262069" class="btn btn-secondary" style="font-size: 0.9rem;">High Profit</a>
-                        <a href="https://my.litefinance.org/traders?type=risk&uid=135262069" class="btn btn-secondary" style="font-size: 0.9rem;">Low Risk</a>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+                        <a href="https://my.litefinance.org/traders?type=total_equity&uid=135262069" class="btn btn-secondary" style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem;">
+                            <i class="fas fa-users"></i> Popular
+                        </a>
+                        <a href="https://my.litefinance.org/traders?type=profit&uid=135262069" class="btn btn-secondary" style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem;">
+                            <i class="fas fa-chart-line"></i> High Profit
+                        </a>
+                        <a href="https://my.litefinance.org/traders?type=risk&uid=135262069" class="btn btn-secondary" style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem;">
+                            <i class="fas fa-shield-alt"></i> Low Risk
+                        </a>
                     </div>
                 </div>
                 <div class="step-card">
@@ -879,9 +932,15 @@
             <h2>Start Copy Trading Today</h2>
             <p>Get access to professional trading with verified performance metrics. Begin with a small investment and watch your account grow by copying successful traders.</p>
             <div class="cta-buttons">
-                <a href="https://my.litefinance.org/traders?type=total_equity&uid=135262069" class="btn">Popular Traders</a>
-                <a href="https://my.litefinance.org/traders?type=profit&uid=135262069" class="btn">High Profit Traders</a>
-                <a href="https://my.litefinance.org/traders?type=risk&uid=135262069" class="btn">Low Risk Traders</a>
+                <a href="https://my.litefinance.org/traders?type=total_equity&uid=135262069" class="btn" style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-users"></i> Popular Traders
+                </a>
+                <a href="https://my.litefinance.org/traders?type=profit&uid=135262069" class="btn" style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-chart-line"></i> High Profit Traders
+                </a>
+                <a href="https://my.litefinance.org/traders?type=risk&uid=135262069" class="btn" style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-shield-alt"></i> Minimal Risk Traders
+                </a>
             </div>
             <p class="contact-info">Have questions? Contact us on <a href="https://www.instagram.com/goldcopytrading.fx" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>, <a href="https://t.me/goldcopytradingfx" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>, <a href="https://www.tiktok.com/@goldcopytrading.fx" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>, or <a href="https://x.com/goldcopytrfx" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></p>
         </div>
