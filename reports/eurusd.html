@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUR/USD Trading Report - 79.1% Returns in 6 Months | Gold Copy Trading</title>
+    <meta name="description" content="EUR/USD trading strategy achieved 79.1% returns with 225 trades and zero losing months. Detailed performance analysis and verified results for professional forex trading.">
+    <meta name="keywords" content="EUR/USD trading, forex trading results, copy trading, 79.1% returns, currency trading, professional trading strategy, verified performance">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Gold Copy Trading">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EUR/USD Trading Report - 79.1% Returns in 6 Months">
+    <meta property="og:description" content="EUR/USD trading strategy achieved 79.1% returns with 225 trades and zero losing months. Professional forex trading performance analysis.">
+    <meta property="og:image" content="https://goldcopytrading.com/reports/report-eurusd.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.goldcopytrading.com/reports/eurusd.html">
+    <meta property="og:site_name" content="Gold Copy Trading">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://goldcopytrading.com/reports/eurusd.html">
+    <meta property="twitter:title" content="EUR/USD Trading Report - 79.1% Returns in 6 Months">
+    <meta property="twitter:description" content="EUR/USD trading strategy achieved 79.1% returns with 225 trades and zero losing months. Professional forex trading performance analysis.">
+    <meta property="twitter:image" content="https://goldcopytrading.com/reports/report-eurusd.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://goldcopytrading.com/reports/eurusd.html">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialProduct",
+      "name": "EUR/USD Trading Strategy",
+      "description": "Professional EUR/USD trading strategy with 79.1% returns in 6 months",
+      "provider": {
+        "@type": "Organization",
+        "name": "Gold Copy Trading",
+        "url": "https://www.goldcopytrading.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "description": "Copy trading service for EUR/USD currency pair"
+      }
+    }
+    </script>
+
+    <!-- Performance Optimization - Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://my.litefinance.org">
+
+    <!-- Stylesheets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"></noscript>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/reports.css">
+
+    <!-- Chart.js (defer loading) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" defer></script>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f1cf5e;
+            --dark: #1a1a1a;
+            --dark-gray: #2d2d2d;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--dark);
+            min-height: 100vh;
+            line-height: 1.6;
+            color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--dark-gray);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .performance-overview {
+            margin: 30px 0;
+        }
+        
+        .highlight-box {
+            background: var(--dark);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid var(--gold);
+            margin: 20px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .highlight-box h2 {
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .highlight-box ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .highlight-box li {
+            margin: 8px 0;
+            color: var(--white);
+        }
+        
+        .cta-section {
+            margin-top: 25px;
+            text-align: center;
+            padding: 20px;
+            background: var(--dark);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .cta-button.primary {
+            background-color: var(--gold);
+            color: var(--dark);
+        }
+
+        .cta-button.primary:hover {
+            background-color: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--gold);
+            color: var(--dark);
+        }
+        
+        h1 {
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 500px;
+            margin-bottom: 30px;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .stat-card {
+            background: var(--dark);
+            border: 2px solid var(--gold);
+            padding: 20px;
+            border-radius: 15px;
+            color: var(--white);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .stat-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+            color: var(--gold);
+        }
+        
+        .stat-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .stat-card .subvalue {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin: 5px 0 0 0;
+        }
+        
+        .profit-positive {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+        
+        .accent-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .highlight-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../index.html#performance">Reports</a></li>
+            <li class="breadcrumb-item">EUR/USD Report</li>
+        </ol>
+    </nav>
+
+    <main id="main-content" role="main">
+        <div class="report-container">
+            <h1 class="report-title">🇪🇺🇺🇸 EUR/USD Trading Excellence - 79.1% Returns</h1>
+            <p class="report-subtitle">Professional EUR/USD Trading Strategy | April - September 2025 Performance</p>
+
+        <div class="performance-overview">
+            <div class="highlight-box">
+                <h2>Outstanding EUR/USD Performance</h2>
+                <p>Our EUR/USD trading strategy has delivered exceptional results with a <strong>79.1% return</strong> over just 6 months. This performance demonstrates the power of disciplined technical analysis, proper risk management, and systematic trading approach.</p>
+
+                <p><strong>Key Success Factors:</strong></p>
+                <ul>
+                    <li><strong>Consistent Profitability:</strong> Every single month was profitable, showing excellent risk management</li>
+                    <li><strong>Strong Start:</strong> 18.98% return in April established early momentum</li>
+                    <li><strong>Strategic Entries:</strong> 225 carefully executed trades with precise timing</li>
+                    <li><strong>Risk Control:</strong> No losing months demonstrates superior capital preservation</li>
+                </ul>
+
+                <!-- Verified Results Image -->
+                <div class="report-image-container">
+                    <img src="report-eurusd.png" alt="Verified EUR/USD Trading Report - 79.1% Returns Professional Analysis"
+                         class="report-image" loading="lazy" width="800" height="600" />
+                    <p class="report-image-caption">
+                        ✅ Verified Trading Results - Professional EUR/USD Market Analysis
+                    </p>
+                </div>
+
+                <div class="report-cta-section">
+                    <h3>Want to Copy These EUR/USD Results?</h3>
+                    <p>Join hundreds of successful copy traders who are already following our proven EUR/USD strategy.</p>
+                    <div class="cta-buttons">
+                        <a href="https://my.litefinance.org/traders/chart?id=1255923&uid=135262069" class="cta-button primary">Copy EUR/USD Trades</a>
+                        <a href="https://www.goldcopytrading.com/" class="cta-button secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <canvas id="eurUsdProfitChart"></canvas>
+            <!-- Static Graph Image as backup/supplement -->
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="graph-eurusd.png" alt="EUR/USD Trading Performance Graph - 79.1% Returns Major Pair Trading"
+                     style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: var(--shadow); border: 2px solid var(--gold);" />
+                <p style="color: var(--gold); font-size: 0.9em; margin-top: 10px; opacity: 0.8;">
+                    📊 Detailed EUR/USD Performance Visualization - Major Pair Trading Excellence
+                </p>
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-card profit-positive">
+                <h3>Total Return</h3>
+                <p class="value">79.1%</p>
+                <p class="subvalue">6-month performance</p>
+            </div>
+            <div class="stat-card highlight-card">
+                <h3>Best Month</h3>
+                <p class="value">18.98%</p>
+                <p class="subvalue">April 2025</p>
+            </div>
+            <div class="stat-card accent-card">
+                <h3>Total Profit</h3>
+                <p class="value">$158.29</p>
+                <p class="subvalue">$200 → $358.29</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Trades</h3>
+                <p class="value">225</p>
+                <p class="subvalue">All profitable months</p>
+            </div>
+            <div class="stat-card profit-positive">
+                <h3>Average Monthly</h3>
+                <p class="value">10.38%</p>
+                <p class="subvalue">Consistent growth</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Wait for Chart.js to load
+        window.addEventListener('load', function() {
+            // EUR/USD trading data with percentages
+            const eurUsdData = [
+                { month: "Apr 2025", profit: 37.95, percentage: 18.98, startBalance: 200.00 },
+                { month: "May 2025", profit: 25.66, percentage: 10.78, startBalance: 237.95 },
+                { month: "Jun 2025", profit: 43.78, percentage: 16.61, startBalance: 263.61 },
+                { month: "Jul 2025", profit: 32.07, percentage: 10.43, startBalance: 307.39 },
+                { month: "Aug 2025", profit: 13.38, percentage: 3.94, startBalance: 339.46 },
+                { month: "Sep 2025", profit: 5.45, percentage: 1.54, startBalance: 352.84 }
+            ];
+
+            // Chart configuration
+            const ctx = document.getElementById('eurUsdProfitChart').getContext('2d');
+            
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: eurUsdData.map(d => d.month),
+                    datasets: [{
+                        label: 'EUR/USD Monthly Return (%)',
+                        data: eurUsdData.map(d => d.percentage),
+                        backgroundColor: eurUsdData.map((d, i) => {
+                            const colors = [
+                                'rgba(102, 126, 234, 1)',     // April - highest
+                                'rgba(102, 126, 234, 0.7)',   // May
+                                'rgba(102, 126, 234, 0.9)',   // June - second highest
+                                'rgba(102, 126, 234, 0.7)',   // July
+                                'rgba(102, 126, 234, 0.5)',   // August
+                                'rgba(102, 126, 234, 0.4)'    // September - lowest
+                            ];
+                            return colors[i];
+                        }),
+                        borderColor: 'rgba(102, 126, 234, 1)',
+                        borderWidth: 2,
+                        borderRadius: 8,
+                        borderSkipped: false,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                padding: 20,
+                                color: '#333'
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: 'white',
+                            bodyColor: 'white',
+                            borderColor: 'rgba(102, 126, 234, 0.5)',
+                            borderWidth: 1,
+                            cornerRadius: 10,
+                            callbacks: {
+                                label: function(context) {
+                                    const dataPoint = eurUsdData[context.dataIndex];
+                                    return [
+                                        `Return: ${context.parsed.y.toFixed(2)}%`,
+                                        `Profit: $${dataPoint.profit.toFixed(2)}`,
+                                        `Start: $${dataPoint.startBalance.toFixed(2)}`
+                                    ];
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 20,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.1)',
+                                lineWidth: 1
+                            },
+                            title: {
+                                display: true,
+                                text: 'EUR/USD Monthly Return (%)',
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                color: '#333'
+                            },
+                            ticks: {
+                                font: {
+                                    size: 12
+                                },
+                                color: '#666',
+                                callback: function(value) {
+                                    return value.toFixed(1) + '%';
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                },
+                                color: '#333'
+                            },
+                            title: {
+                                display: true,
+                                text: 'Month',
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                color: '#333'
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            });
+
+            // Add hover effects
+            chart.canvas.addEventListener('mousemove', function(e) {
+                chart.canvas.style.cursor = 'pointer';
+            });
+            
+            chart.canvas.addEventListener('mouseleave', function(e) {
+                chart.canvas.style.cursor = 'default';
+            });
+        });
+    </script>
+</body>
+</html>
