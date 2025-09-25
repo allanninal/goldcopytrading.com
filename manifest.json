@@ -1,0 +1,112 @@
+{
+  "name": "Gold Copy Trading - Professional Forex Signals",
+  "short_name": "GoldCopyTrading",
+  "description": "Professional forex copy trading platform with verified results and transparent performance tracking",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#d4af37",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["finance", "business", "productivity"],
+  "icons": [
+    {
+      "src": "assets/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/desktop-screenshot.png",
+      "sizes": "1200x675",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Gold Copy Trading - Desktop Dashboard"
+    },
+    {
+      "src": "assets/screenshots/mobile-screenshot.png",
+      "sizes": "360x640",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Gold Copy Trading - Mobile Trading View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Trading Reports",
+      "short_name": "Reports",
+      "description": "View detailed trading performance reports",
+      "url": "/#performance",
+      "icons": [
+        {
+          "src": "assets/icons/shortcut-reports.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Copy Trading",
+      "short_name": "Copy",
+      "description": "Start copy trading immediately",
+      "url": "/#copy-trading",
+      "icons": [
+        {
+          "src": "assets/icons/shortcut-copy.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
