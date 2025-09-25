@@ -1,0 +1,47 @@
+# Gold Copy Trading - Robots.txt
+# Optimized for search engine crawling and indexing
+
+User-agent: *
+Allow: /
+
+# Prioritize key content for crawling
+Allow: /reports/
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Block unnecessary paths
+Disallow: /assets/icons/
+Disallow: /assets/screenshots/
+Disallow: /assets/templates/
+
+# Sitemap location
+Sitemap: https://www.goldcopytrading.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block common scrapers and malicious bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
