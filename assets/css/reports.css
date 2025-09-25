@@ -49,12 +49,15 @@
 }
 
 .report-image {
+    width: 100%;
     max-width: 100%;
     height: auto;
     border-radius: 12px;
     box-shadow: var(--shadow);
     border: 2px solid var(--gold);
     transition: var(--transition);
+    object-fit: contain;
+    background: white;
 }
 
 .report-image:hover {
