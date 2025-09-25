@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Copy Trading - Test Runner</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #1a1a1a;
+            --dark-gray: #2d2d2d;
+            --white: #ffffff;
+            --green: #4caf50;
+            --red: #f44336;
+            --orange: #ff9800;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--dark-gray);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .test-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            background: #b8941f;
+        }
+
+        .btn-secondary {
+            background: var(--dark);
+            color: var(--white);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .test-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--dark);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .status-item {
+            text-align: center;
+        }
+
+        .status-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .status-passed { color: var(--green); }
+        .status-failed { color: var(--red); }
+        .status-total { color: var(--gold); }
+
+        .test-results {
+            background: var(--dark);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .test-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .test-item:last-child {
+            border-bottom: none;
+        }
+
+        .test-name {
+            font-weight: 600;
+        }
+
+        .test-result {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .test-status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        .status-passed {
+            background: var(--green);
+            color: white;
+        }
+
+        .status-failed {
+            background: var(--red);
+            color: white;
+        }
+
+        .status-running {
+            background: var(--orange);
+            color: white;
+        }
+
+        .test-duration {
+            color: #aaa;
+            font-size: 0.9em;
+        }
+
+        .test-error {
+            color: var(--red);
+            font-size: 0.9em;
+            margin-top: 5px;
+            font-family: monospace;
+        }
+
+        .loading {
+            text-align: center;
+            color: var(--gold);
+            font-size: 1.1em;
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { color: transparent; text-shadow: .25em 0 0 transparent, .5em 0 0 transparent; }
+            40% { color: var(--gold); text-shadow: .25em 0 0 transparent, .5em 0 0 transparent; }
+            60% { text-shadow: .25em 0 0 var(--gold), .5em 0 0 transparent; }
+            80%, 100% { text-shadow: .25em 0 0 var(--gold), .5em 0 0 var(--gold); }
+        }
+
+        .test-log {
+            background: #000;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.9em;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        .individual-tests {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .individual-test {
+            background: var(--dark);
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #333;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        .individual-test:hover {
+            border-color: var(--gold);
+        }
+
+        .individual-test h4 {
+            margin: 0 0 10px 0;
+            color: var(--gold);
+        }
+
+        .individual-test p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .test-controls {
+                flex-direction: column;
+            }
+
+            .test-status {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .individual-tests {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Gold Copy Trading Test Suite</h1>
+
+        <div class="test-controls">
+            <button class="btn btn-primary" onclick="runAllTests()">Run All Tests</button>
+            <button class="btn btn-secondary" onclick="clearResults()">Clear Results</button>
+            <button class="btn btn-secondary" onclick="exportResults()">Export Results</button>
+            <button class="btn btn-secondary" onclick="toggleLog()">Toggle Log</button>
+        </div>
+
+        <div class="test-status" id="test-status">
+            <div class="status-item">
+                <div class="status-value status-total" id="total-tests">0</div>
+                <div>Total Tests</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value status-passed" id="passed-tests">0</div>
+                <div>Passed</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value status-failed" id="failed-tests">0</div>
+                <div>Failed</div>
+            </div>
+            <div class="status-item">
+                <div class="status-value" id="success-rate">0%</div>
+                <div>Success Rate</div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">Running tests</div>
+
+        <div class="test-results" id="test-results" style="display: none;">
+            <h3>Test Results</h3>
+            <div id="results-list"></div>
+        </div>
+
+        <div class="test-log" id="test-log" style="display: none;">
+            <h3>Test Log</h3>
+            <div id="log-content"></div>
+        </div>
+
+        <div class="individual-tests">
+            <div class="individual-test" onclick="runSingleTest('homepage')">
+                <h4>Homepage Load</h4>
+                <p>Tests core homepage elements and functionality</p>
+            </div>
+
+            <div class="individual-test" onclick="runSingleTest('navigation')">
+                <h4>Navigation</h4>
+                <p>Validates all internal links and navigation elements</p>
+            </div>
+
+            <div class="individual-test" onclick="runSingleTest('performance')">
+                <h4>Performance</h4>
+                <p>Monitors page load times and Core Web Vitals</p>
+            </div>
+
+            <div class="individual-test" onclick="runSingleTest('accessibility')">
+                <h4>Accessibility</h4>
+                <p>Checks WCAG compliance and screen reader support</p>
+            </div>
+
+            <div class="individual-test" onclick="runSingleTest('seo')">
+                <h4>SEO</h4>
+                <p>Validates meta tags and SEO optimization</p>
+            </div>
+
+            <div class="individual-test" onclick="runSingleTest('pwa')">
+                <h4>PWA</h4>
+                <p>Tests Progressive Web App functionality</p>
+            </div>
+
+            <div class="individual-test" onclick="runSingleTest('charts')">
+                <h4>Charts</h4>
+                <p>Validates Chart.js loading and data visualization</p>
+            </div>
+
+            <div class="individual-test" onclick="runSingleTest('mobile')">
+                <h4>Mobile</h4>
+                <p>Tests mobile responsiveness and touch interactions</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load the main site's testing infrastructure -->
+    <script src="../assets/js/error-handler.js"></script>
+    <script src="../assets/js/image-optimizer.js"></script>
+    <script src="../assets/js/performance-monitor.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script src="e2e-tests.js"></script>
+
+    <script>
+        let testRunner = null;
+        let isRunning = false;
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Import and initialize test suite
+            setTimeout(() => {
+                if (window.E2ETestSuite) {
+                    testRunner = new window.E2ETestSuite();
+                    console.log('Test runner initialized');
+                } else {
+                    console.error('Test suite not loaded');
+                }
+            }, 1000);
+        });
+
+        async function runAllTests() {
+            if (isRunning) return;
+
+            isRunning = true;
+            showLoading(true);
+            clearResults();
+
+            try {
+                if (!testRunner) {
+                    throw new Error('Test runner not initialized');
+                }
+
+                await testRunner.runAllTests();
+                updateResults(testRunner.getTestReport());
+            } catch (error) {
+                console.error('Test execution failed:', error);
+                alert('Test execution failed: ' + error.message);
+            } finally {
+                isRunning = false;
+                showLoading(false);
+            }
+        }
+
+        async function runSingleTest(testName) {
+            if (isRunning) return;
+
+            isRunning = true;
+            showLoading(true);
+
+            try {
+                if (!testRunner) {
+                    throw new Error('Test runner not initialized');
+                }
+
+                await testRunner.runSingleTest(testName);
+                updateResults(testRunner.getTestReport());
+            } catch (error) {
+                console.error('Single test execution failed:', error);
+                alert('Test execution failed: ' + error.message);
+            } finally {
+                isRunning = false;
+                showLoading(false);
+            }
+        }
+
+        function updateResults(report) {
+            const { results, summary } = report;
+
+            // Update status
+            document.getElementById('total-tests').textContent = summary.total;
+            document.getElementById('passed-tests').textContent = summary.passed;
+            document.getElementById('failed-tests').textContent = summary.failed;
+            document.getElementById('success-rate').textContent =
+                summary.total > 0 ? Math.round((summary.passed / summary.total) * 100) + '%' : '0%';
+
+            // Update results list
+            const resultsList = document.getElementById('results-list');
+            resultsList.innerHTML = '';
+
+            results.forEach(test => {
+                const testItem = document.createElement('div');
+                testItem.className = 'test-item';
+
+                const statusClass = test.status === 'PASSED' ? 'status-passed' : 'status-failed';
+
+                testItem.innerHTML = `
+                    <div>
+                        <div class="test-name">${test.name}</div>
+                        ${test.error ? `<div class="test-error">${test.error}</div>` : ''}
+                    </div>
+                    <div class="test-result">
+                        <span class="test-duration">${test.duration}ms</span>
+                        <span class="test-status-badge ${statusClass}">${test.status}</span>
+                    </div>
+                `;
+
+                resultsList.appendChild(testItem);
+            });
+
+            // Show results
+            document.getElementById('test-results').style.display = 'block';
+        }
+
+        function showLoading(show) {
+            const loading = document.getElementById('loading');
+            const results = document.getElementById('test-results');
+
+            if (show) {
+                loading.style.display = 'block';
+                results.style.display = 'none';
+            } else {
+                loading.style.display = 'none';
+            }
+        }
+
+        function clearResults() {
+            if (testRunner) {
+                testRunner.clearResults();
+            }
+
+            document.getElementById('total-tests').textContent = '0';
+            document.getElementById('passed-tests').textContent = '0';
+            document.getElementById('failed-tests').textContent = '0';
+            document.getElementById('success-rate').textContent = '0%';
+
+            document.getElementById('results-list').innerHTML = '';
+            document.getElementById('test-results').style.display = 'none';
+            document.getElementById('log-content').innerHTML = '';
+        }
+
+        function exportResults() {
+            if (!testRunner) {
+                alert('No test results to export');
+                return;
+            }
+
+            const report = testRunner.getTestReport();
+            const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `test-report-${new Date().toISOString().slice(0, 19)}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            URL.revokeObjectURL(url);
+        }
+
+        function toggleLog() {
+            const log = document.getElementById('test-log');
+            const isVisible = log.style.display !== 'none';
+
+            if (isVisible) {
+                log.style.display = 'none';
+            } else {
+                log.style.display = 'block';
+                updateLog();
+            }
+        }
+
+        function updateLog() {
+            const logContent = document.getElementById('log-content');
+
+            // Get console logs (simplified - in real implementation, you'd capture actual logs)
+            const logs = [
+                '🧪 Test Suite Initialized',
+                '📊 Performance Monitor Active',
+                '🔍 Accessibility Scanner Ready',
+                '🎯 SEO Validator Loaded',
+                '📱 PWA Components Detected',
+                '⚡ Ready to run tests...'
+            ];
+
+            logContent.textContent = logs.join('\n');
+        }
+
+        // Override console methods to capture logs (optional)
+        const originalLog = console.log;
+        const originalError = console.error;
+
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            // Could capture logs here for display
+        };
+
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            // Could capture errors here for display
+        };
+    </script>
+</body>
+</html>
