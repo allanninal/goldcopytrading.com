@@ -1,0 +1,525 @@
+/* Gold Copy Trading - Accessibility Enhancements */
+/* Comprehensive WCAG 2.1 AA compliance styles */
+
+/* Screen reader only content */
+.sr-only, .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Skip navigation links */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    z-index: 1000;
+    transition: top 0.3s ease;
+    font-size: 1rem;
+}
+
+.skip-link:focus {
+    top: 6px;
+    outline: 3px solid var(--white);
+    outline-offset: 2px;
+}
+
+.skip-link:hover {
+    background: var(--gold-light);
+    color: var(--dark);
+}
+
+/* Focus management */
+*:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* Enhanced focus for interactive elements */
+button:focus,
+.btn:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --gold: #ffbf00;
+        --gold-light: #ffd700;
+        --dark: #000000;
+        --dark-gray: #333333;
+        --white: #ffffff;
+    }
+    
+    .btn {
+        border: 2px solid currentColor;
+    }
+    
+    .metric-card,
+    .stat-card,
+    .step-card {
+        border: 2px solid var(--white);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    .metric-card:hover,
+    .stat-card:hover,
+    .step-card:hover {
+        transform: none;
+    }
+}
+
+/* Enhanced color contrast */
+.text-high-contrast {
+    color: var(--white);
+    background-color: var(--dark);
+}
+
+/* Accessible form elements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    background-color: var(--dark-gray);
+    color: var(--white);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--gold-light);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+}
+
+.form-input[aria-invalid="true"] {
+    border-color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.form-error {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-error::before {
+    content: "⚠";
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+/* Accessible buttons */
+.btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn[aria-expanded="true"]::after {
+    content: "▲";
+    margin-left: 0.5rem;
+}
+
+.btn[aria-expanded="false"]::after {
+    content: "▼";
+    margin-left: 0.5rem;
+}
+
+/* Accessible tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--gold);
+}
+
+.table th {
+    background-color: var(--gold);
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+/* Accessible navigation */
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: rgba(212, 175, 55, 0.2);
+    color: var(--gold);
+}
+
+.nav-link[aria-current="page"] {
+    background-color: var(--gold);
+    color: var(--dark);
+    font-weight: 600;
+}
+
+/* Breadcrumb navigation */
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-item {
+    font-size: 0.875rem;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+    content: "/";
+    margin: 0 0.5rem;
+    color: var(--gold);
+}
+
+.breadcrumb-item a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: var(--white);
+}
+
+/* Accessible modals/dialogs */
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.dialog[aria-hidden="true"] {
+    display: none;
+}
+
+.dialog-content {
+    background-color: var(--dark-gray);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.dialog-title {
+    margin-top: 0;
+    color: var(--gold);
+}
+
+.dialog-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+}
+
+/* Accessible alerts and notifications */
+.alert {
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 2px solid;
+    border-radius: 4px;
+    position: relative;
+}
+
+.alert-success {
+    background-color: rgba(46, 125, 50, 0.1);
+    border-color: #2e7d32;
+    color: #4caf50;
+}
+
+.alert-warning {
+    background-color: rgba(245, 124, 0, 0.1);
+    border-color: #f57c00;
+    color: #ff9800;
+}
+
+.alert-error {
+    background-color: rgba(211, 47, 47, 0.1);
+    border-color: #d32f2f;
+    color: #f44336;
+}
+
+.alert-info {
+    background-color: rgba(212, 175, 55, 0.1);
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.alert::before {
+    content: "ⓘ";
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.alert-success::before { content: "✓"; }
+.alert-warning::before { content: "⚠"; }
+.alert-error::before { content: "✕"; }
+
+/* Accessible progress indicators */
+.progress {
+    width: 100%;
+    height: 20px;
+    background-color: var(--dark-gray);
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--gold);
+    transition: width 0.3s ease;
+}
+
+/* Accessible tooltips */
+.tooltip-trigger {
+    position: relative;
+}
+
+.tooltip-trigger[aria-describedby] {
+    cursor: help;
+    border-bottom: 1px dotted var(--gold);
+}
+
+.tooltip {
+    position: absolute;
+    z-index: 1000;
+    padding: 0.5rem;
+    background-color: var(--dark);
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    color: var(--white);
+    font-size: 0.875rem;
+    max-width: 250px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--gold);
+}
+
+.tooltip-trigger:hover .tooltip,
+.tooltip-trigger:focus .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Enhanced loading states */
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--gold);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Screen reader announcements */
+.sr-announcement {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.sr-announcement[aria-live="polite"],
+.sr-announcement[aria-live="assertive"] {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    background-color: var(--dark);
+    color: var(--gold);
+    padding: 0.5rem;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+
+/* Responsive accessibility */
+@media (max-width: 768px) {
+    .btn {
+        min-height: 48px;
+        min-width: 48px;
+        padding: 16px 24px;
+    }
+    
+    .form-input {
+        padding: 16px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .tooltip {
+        position: fixed;
+        top: auto;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        max-width: none;
+        transform: none;
+    }
+}
+
+/* Print accessibility */
+@media print {
+    .skip-link,
+    .btn,
+    .tooltip {
+        display: none;
+    }
+    
+    .sr-only {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+    }
+    
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+}
