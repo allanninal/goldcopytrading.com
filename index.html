@@ -690,50 +690,7 @@
     </footer>
 
     <script>
-        // Accessible FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentNode;
-                const answer = button.nextElementSibling;
-                const isExpanded = button.getAttribute('aria-expanded') === 'true';
-
-                // Close all other items
-                document.querySelectorAll('.faq-question').forEach(otherButton => {
-                    if (otherButton !== button) {
-                        const otherAnswer = otherButton.nextElementSibling;
-                        otherButton.setAttribute('aria-expanded', 'false');
-                        otherAnswer.setAttribute('hidden', '');
-                        otherButton.parentNode.classList.remove('active');
-                    }
-                });
-
-                // Toggle clicked item
-                if (!isExpanded) {
-                    button.setAttribute('aria-expanded', 'true');
-                    answer.removeAttribute('hidden');
-                    item.classList.add('active');
-
-                    // Track FAQ engagement with Google Analytics
-                    const questionText = button.querySelector('span').textContent;
-                    gtag('event', 'faq_open', {
-                        'event_category': 'Engagement',
-                        'event_label': questionText
-                    });
-                } else {
-                    button.setAttribute('aria-expanded', 'false');
-                    answer.setAttribute('hidden', '');
-                    item.classList.remove('active');
-                }
-            });
-
-            // Add keyboard support
-            button.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    button.click();
-                }
-            });
-        });
+        // FAQ functionality is handled by utils.js - FAQ.initialize()
         
         // Add event tracking for CTA buttons
         document.querySelectorAll('.btn').forEach(button => {
