@@ -1,0 +1,86 @@
+name: Quality Assurance
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install testing dependencies
+      run: |
+        npm install -g puppeteer
+        npm install -g axe-core
+        npm install -g lighthouse
+
+    - name: Content Validation
+      run: |
+        # Check for sensitive content
+        echo "Scanning for potential issues..."
+
+        # Check for minimum investment mentions
+        grep -r "200" index.html reports/ || echo "Investment amount check completed"
+
+        # Verify no cents account references
+        if grep -ri "cents account" . --exclude-dir=.git --exclude-dir=node_modules; then
+          echo "ERROR: Found 'cents account' references"
+          exit 1
+        else
+          echo "✅ No 'cents account' references found"
+        fi
+
+    - name: Performance Validation
+      run: |
+        # Basic file size checks
+        echo "Checking critical file sizes..."
+
+        # Check CSS files aren't too large
+        find assets/css -name "*.css" -size +100k -exec echo "Warning: Large CSS file: {}" \;
+
+        # Check JS files
+        find assets/js -name "*.js" -size +200k -exec echo "Warning: Large JS file: {}" \;
+
+        echo "Performance validation completed"
+
+    - name: Security Scan
+      run: |
+        # Basic security checks
+        echo "Running security validation..."
+
+        # Check for hardcoded secrets (basic check)
+        if grep -ri "api[_-]key\|secret\|password" . --exclude-dir=.git --exclude-dir=node_modules --include="*.js" --include="*.html"; then
+          echo "WARNING: Potential hardcoded secrets found"
+        else
+          echo "✅ No obvious hardcoded secrets found"
+        fi
+
+        # Check for external script integrity
+        if grep -r "script.*src.*http" . --include="*.html" | grep -v "integrity="; then
+          echo "WARNING: External scripts without integrity checks found"
+        else
+          echo "✅ External scripts have integrity checks"
+        fi
+
+    - name: Accessibility Check
+      run: |
+        echo "Basic accessibility validation..."
+
+        # Check for alt attributes on images
+        if grep -r "<img" . --include="*.html" | grep -v "alt="; then
+          echo "WARNING: Images without alt attributes found"
+        else
+          echo "✅ All images have alt attributes"
+        fi
+
+        echo "Quality checks completed"
