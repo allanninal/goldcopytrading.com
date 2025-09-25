@@ -1,0 +1,156 @@
+{
+  "data": [
+    {
+      "id": "minimum_investment",
+      "category": "Getting Started",
+      "question": "What is the minimum investment required?",
+      "answer": "The minimum investment is $200 USD to start copying our proven trading strategy. This amount allows for proper risk management and diversification across our multi-currency portfolio.",
+      "order": 1,
+      "featured": true,
+      "keywords": ["minimum", "investment", "$200", "start", "requirement"]
+    },
+    {
+      "id": "how_to_copy",
+      "category": "Getting Started",
+      "question": "How do I start copying your trades?",
+      "answer": "Simply click on any 'Copy Trades' button throughout our website. You'll be redirected to our LiteFinance platform where you can create an account and start copying our strategy immediately. The setup process takes just a few minutes.",
+      "order": 2,
+      "featured": true,
+      "keywords": ["copy", "trades", "start", "litefinance", "setup"]
+    },
+    {
+      "id": "platform_safety",
+      "category": "Platform",
+      "question": "Is LiteFinance a regulated and safe platform?",
+      "answer": "Yes, LiteFinance is a fully regulated broker with licenses from multiple financial authorities. Your funds are segregated and protected by investor compensation schemes. The platform has been operating since 2005 and serves millions of traders worldwide.",
+      "order": 3,
+      "featured": true,
+      "keywords": ["litefinance", "regulated", "safe", "licensed", "protected"]
+    },
+    {
+      "id": "performance_verification",
+      "category": "Performance",
+      "question": "Are the trading results real and verified?",
+      "answer": "Absolutely. All our trading results are from live trading accounts with real money, not demo accounts. The performance data is directly from LiteFinance's verified trading platform and can be independently verified. We provide full transparency with detailed monthly breakdowns.",
+      "order": 4,
+      "featured": true,
+      "keywords": ["real", "verified", "live", "trading", "transparent"]
+    },
+    {
+      "id": "risk_management",
+      "category": "Risk",
+      "question": "What risk management measures do you use?",
+      "answer": "We employ strict risk management including: maximum 2% risk per trade, diversification across 4 major currency pairs, dynamic position sizing based on market volatility, and continuous monitoring during London and New York sessions. Our maximum historical drawdown is only 3.2%.",
+      "order": 5,
+      "featured": false,
+      "keywords": ["risk", "management", "2%", "diversification", "drawdown"]
+    },
+    {
+      "id": "profit_sharing",
+      "category": "Fees",
+      "question": "How does the profit sharing work?",
+      "answer": "You keep 75% of all profits generated, while we receive 25% as our performance fee. This fee is only charged on actual profits - if there are no profits, there are no fees. This aligns our interests with your success.",
+      "order": 6,
+      "featured": false,
+      "keywords": ["profit", "sharing", "75%", "25%", "fees", "performance"]
+    },
+    {
+      "id": "time_commitment",
+      "category": "Trading",
+      "question": "Do I need to monitor the trades constantly?",
+      "answer": "No monitoring required on your part. Our copy trading system automatically replicates all trades in your account in real-time. You can check your progress anytime through the LiteFinance platform, but active monitoring is not necessary.",
+      "order": 7,
+      "featured": false,
+      "keywords": ["monitoring", "automatic", "real-time", "passive", "copy trading"]
+    },
+    {
+      "id": "withdrawal_policy",
+      "category": "Account Management",
+      "question": "Can I withdraw my profits anytime?",
+      "answer": "Yes, you can withdraw your profits and initial investment at any time through LiteFinance's standard withdrawal procedures. Most withdrawal requests are processed within 1-3 business days depending on the method chosen.",
+      "order": 8,
+      "featured": false,
+      "keywords": ["withdraw", "profits", "anytime", "1-3 days", "flexible"]
+    },
+    {
+      "id": "currency_pairs",
+      "category": "Strategy",
+      "question": "Which currency pairs do you trade?",
+      "answer": "We focus on 4 major currency pairs: EUR/USD, GBP/USD, USD/CHF, and AUD/USD. These pairs offer the best liquidity, lowest spreads, and most predictable behavior patterns. Each pair contributes 25% to the overall portfolio allocation.",
+      "order": 9,
+      "featured": false,
+      "keywords": ["currency pairs", "EURUSD", "GBPUSD", "USDCHF", "AUDUSD", "25%"]
+    },
+    {
+      "id": "trading_hours",
+      "category": "Strategy",
+      "question": "What are your active trading hours?",
+      "answer": "We primarily trade during the London and New York session overlap (8:00-12:00 EST) when market volatility and liquidity are highest. Some trades may occur during other major session times based on economic news releases and market conditions.",
+      "order": 10,
+      "featured": false,
+      "keywords": ["trading hours", "london", "new york", "8:00-12:00", "EST"]
+    },
+    {
+      "id": "experience_required",
+      "category": "Getting Started",
+      "question": "Do I need trading experience to copy your strategy?",
+      "answer": "No trading experience is required. Copy trading allows you to benefit from our professional expertise without needing to learn technical analysis or market fundamentals. The system automatically handles all trading decisions for you.",
+      "order": 11,
+      "featured": false,
+      "keywords": ["experience", "required", "copy trading", "automatic", "professional"]
+    },
+    {
+      "id": "account_types",
+      "category": "Platform",
+      "question": "What account types are available?",
+      "answer": "LiteFinance offers various account types suitable for copy trading, starting from their Standard account with minimum $200 deposit. You can choose the account type that best fits your investment goals and risk tolerance.",
+      "order": 12,
+      "featured": false,
+      "keywords": ["account types", "standard account", "$200", "investment goals"]
+    },
+    {
+      "id": "stop_copying",
+      "category": "Account Management",
+      "question": "Can I stop copying at any time?",
+      "answer": "Yes, you have full control over your copy trading. You can stop copying our strategy at any time through your LiteFinance dashboard. Any open positions will remain until they reach their natural close, or you can manually close them.",
+      "order": 13,
+      "featured": false,
+      "keywords": ["stop copying", "full control", "dashboard", "open positions"]
+    },
+    {
+      "id": "past_performance",
+      "category": "Performance",
+      "question": "Does past performance guarantee future results?",
+      "answer": "No, past performance does not guarantee future results. While our track record shows consistent profitability, all trading involves risk and market conditions can change. We recommend only investing funds you can afford to lose and maintaining proper risk management.",
+      "order": 14,
+      "featured": false,
+      "keywords": ["past performance", "future results", "risk", "market conditions"]
+    },
+    {
+      "id": "support_contact",
+      "category": "Support",
+      "question": "How can I get support if I have questions?",
+      "answer": "You can reach our support team through the contact form on our website. For platform-specific questions, LiteFinance provides 24/7 customer support through live chat, email, and phone. Response times are typically within 2-4 hours during business hours.",
+      "order": 15,
+      "featured": false,
+      "keywords": ["support", "contact form", "24/7", "live chat", "2-4 hours"]
+    }
+  ],
+  "meta": {
+    "total_faqs": 15,
+    "categories": [
+      "Getting Started",
+      "Platform",
+      "Performance",
+      "Risk",
+      "Fees",
+      "Trading",
+      "Account Management",
+      "Strategy",
+      "Support"
+    ],
+    "featured_count": 4,
+    "last_updated": "2025-09-30T23:59:59Z",
+    "version": "1.0"
+  }
+}

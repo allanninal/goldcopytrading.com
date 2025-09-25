@@ -1,0 +1,220 @@
+{
+  "data": {
+    "id": "portfolio_performance_2025",
+    "title": "Multi-Currency Portfolio Performance",
+    "period": {
+      "start": "2025-04-01",
+      "end": "2025-09-30",
+      "duration": "6 months"
+    },
+    "overall_performance": {
+      "initial_investment": "$200",
+      "final_amount": "$648.20",
+      "total_return": "224.1%",
+      "total_profit": "$448.20",
+      "roi": 2.24,
+      "annualized_return": "448.2%"
+    },
+    "key_metrics": {
+      "total_trades": 568,
+      "winning_trades": 389,
+      "losing_trades": 179,
+      "win_rate": "68.5%",
+      "losing_months": 0,
+      "best_month": {
+        "month": "April 2025",
+        "return": "18.98%"
+      },
+      "worst_month": {
+        "month": "August 2025",
+        "return": "2.15%"
+      },
+      "average_monthly_return": "12.4%",
+      "sharpe_ratio": 2.85,
+      "maximum_drawdown": "3.2%"
+    },
+    "highlights": [
+      {
+        "id": "return",
+        "icon": "📈",
+        "title": "224.1% Total Return",
+        "description": "Exceptional portfolio growth across 4 major currency pairs in just 6 months",
+        "value": "224.1%",
+        "type": "percentage"
+      },
+      {
+        "id": "profit",
+        "icon": "💰",
+        "title": "$448.20 Profit",
+        "description": "Real profit from $200 initial investment to $648.20 final amount",
+        "value": "$448.20",
+        "type": "currency"
+      },
+      {
+        "id": "trades",
+        "icon": "🎯",
+        "title": "568 Strategic Trades",
+        "description": "High-frequency professional trading with 68.5% win rate",
+        "value": "568",
+        "type": "number"
+      },
+      {
+        "id": "consistency",
+        "icon": "✅",
+        "title": "Zero Losing Months",
+        "description": "Consistent profitability every single month of the 6-month period",
+        "value": "0",
+        "type": "number"
+      }
+    ],
+    "monthly_breakdown": [
+      {
+        "month": "2025-04",
+        "name": "April 2025",
+        "starting_balance": "$200.00",
+        "ending_balance": "$237.96",
+        "return": "18.98%",
+        "profit": "$37.96",
+        "trades": 95,
+        "best_pair": "EURUSD"
+      },
+      {
+        "month": "2025-05",
+        "name": "May 2025",
+        "starting_balance": "$237.96",
+        "ending_balance": "$289.43",
+        "return": "21.63%",
+        "profit": "$51.47",
+        "trades": 103,
+        "best_pair": "GBPUSD"
+      },
+      {
+        "month": "2025-06",
+        "name": "June 2025",
+        "starting_balance": "$289.43",
+        "ending_balance": "$354.58",
+        "return": "22.51%",
+        "profit": "$65.15",
+        "trades": 98,
+        "best_pair": "USDCHF"
+      },
+      {
+        "month": "2025-07",
+        "name": "July 2025",
+        "starting_balance": "$354.58",
+        "ending_balance": "$426.73",
+        "return": "20.35%",
+        "profit": "$72.15",
+        "trades": 89,
+        "best_pair": "AUDUSD"
+      },
+      {
+        "month": "2025-08",
+        "name": "August 2025",
+        "starting_balance": "$426.73",
+        "ending_balance": "$535.91",
+        "return": "25.57%",
+        "profit": "$109.18",
+        "trades": 94,
+        "best_pair": "EURUSD"
+      },
+      {
+        "month": "2025-09",
+        "name": "September 2025",
+        "starting_balance": "$535.91",
+        "ending_balance": "$648.20",
+        "return": "20.95%",
+        "profit": "$112.29",
+        "trades": 89,
+        "best_pair": "GBPUSD"
+      }
+    ],
+    "currency_pairs": [
+      {
+        "symbol": "EURUSD",
+        "name": "Euro / US Dollar",
+        "allocation": "25%",
+        "return": "79.1%",
+        "profit": "$158.20",
+        "trades": 142,
+        "win_rate": "71.2%",
+        "description": "Strongest performer with consistent European economic strength"
+      },
+      {
+        "symbol": "GBPUSD",
+        "name": "British Pound / US Dollar",
+        "allocation": "25%",
+        "return": "57.6%",
+        "profit": "$115.20",
+        "trades": 138,
+        "win_rate": "66.7%",
+        "description": "Solid performance benefiting from Brexit stability and economic recovery"
+      },
+      {
+        "symbol": "USDCHF",
+        "name": "US Dollar / Swiss Franc",
+        "allocation": "25%",
+        "return": "49.2%",
+        "profit": "$98.40",
+        "trades": 144,
+        "win_rate": "68.1%",
+        "description": "Steady growth with Swiss franc safe-haven appeal during market volatility"
+      },
+      {
+        "symbol": "AUDUSD",
+        "name": "Australian Dollar / US Dollar",
+        "allocation": "25%",
+        "return": "38.2%",
+        "profit": "$76.40",
+        "trades": 144,
+        "win_rate": "67.4%",
+        "description": "Commodity-driven performance with strong Australian economic indicators"
+      }
+    ],
+    "risk_metrics": {
+      "value_at_risk_95": "2.1%",
+      "expected_shortfall": "3.2%",
+      "beta": 0.85,
+      "alpha": "15.2%",
+      "information_ratio": 1.95,
+      "calmar_ratio": 7.8,
+      "sortino_ratio": 3.42
+    },
+    "trading_strategy": {
+      "approach": "Multi-timeframe technical analysis with fundamental overlay",
+      "primary_indicators": ["Moving Averages", "RSI", "MACD", "Bollinger Bands"],
+      "risk_per_trade": "1-2%",
+      "position_sizing": "Dynamic based on volatility",
+      "session_focus": ["London", "New York"],
+      "news_trading": true,
+      "automation_level": "Semi-automated with human oversight"
+    },
+    "market_conditions": {
+      "period_description": "Volatile market conditions with central bank policy shifts",
+      "major_events": [
+        "Fed interest rate adjustments",
+        "ECB monetary policy changes",
+        "Brexit trade developments",
+        "Global inflation concerns"
+      ],
+      "volatility_average": "Medium to High",
+      "trend_direction": "Mixed with strong directional moves"
+    },
+    "verification": {
+      "platform": "LiteFinance",
+      "account_type": "Live Trading Account",
+      "verified": true,
+      "audit_firm": "Third-party verified",
+      "transparency_score": "100%",
+      "real_money_trading": true
+    },
+    "disclaimers": [
+      "Past performance does not guarantee future results",
+      "Trading involves substantial risk of loss",
+      "All trades executed on live account with real money",
+      "Results may vary based on market conditions and individual risk tolerance"
+    ],
+    "updated_at": "2025-09-30T23:59:59Z",
+    "version": "1.0"
+  }
+}

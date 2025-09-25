@@ -1,0 +1,121 @@
+{
+  "cms": {
+    "provider": "local",
+    "fallback_enabled": true,
+    "cache_duration": 300000,
+    "max_cache_size": 100,
+    "auto_refresh": true
+  },
+  "content_types": {
+    "trading_reports": {
+      "endpoint": "trading-reports",
+      "cache_key": "reports",
+      "required_fields": ["pair", "return", "profit", "trades", "description"]
+    },
+    "performance_data": {
+      "endpoint": "performance-data",
+      "cache_key": "performance",
+      "required_fields": ["total_return", "total_profit", "duration", "highlights"]
+    },
+    "faq_items": {
+      "endpoint": "faq-items",
+      "cache_key": "faqs",
+      "required_fields": ["question", "answer", "category", "order"]
+    },
+    "testimonials": {
+      "endpoint": "testimonials",
+      "cache_key": "testimonials",
+      "required_fields": ["name", "content", "rating", "verified"]
+    },
+    "trading_pairs": {
+      "endpoint": "trading-pairs",
+      "cache_key": "pairs",
+      "required_fields": ["symbol", "name", "performance", "description"]
+    },
+    "blog_posts": {
+      "endpoint": "blog-posts",
+      "cache_key": "blog",
+      "required_fields": ["title", "content", "author", "date", "category"]
+    }
+  },
+  "strapi": {
+    "base_url": "https://cms.goldcopytrading.com",
+    "auth_token": null,
+    "version": "v4",
+    "populate": "*",
+    "pagination": {
+      "limit": 100
+    }
+  },
+  "contentful": {
+    "space_id": null,
+    "access_token": null,
+    "environment": "master",
+    "host": "cdn.contentful.com"
+  },
+  "sanity": {
+    "project_id": null,
+    "dataset": "production",
+    "api_version": "2023-12-01",
+    "use_cdn": true
+  },
+  "local_content": {
+    "base_path": "/content",
+    "file_extension": ".json",
+    "watch_changes": true
+  },
+  "realtime": {
+    "enabled": false,
+    "websocket_url": null,
+    "reconnect_attempts": 3,
+    "heartbeat_interval": 30000
+  },
+  "content_scheduling": {
+    "enabled": true,
+    "timezone": "UTC",
+    "preview_mode": false
+  },
+  "seo": {
+    "auto_meta_tags": true,
+    "sitemap_generation": true,
+    "structured_data": true
+  },
+  "localization": {
+    "enabled": false,
+    "default_locale": "en",
+    "supported_locales": ["en"],
+    "fallback_locale": "en"
+  },
+  "media": {
+    "cdn_url": "https://media.goldcopytrading.com",
+    "auto_optimization": true,
+    "formats": ["webp", "avif", "jpg", "png"],
+    "sizes": [320, 640, 768, 1024, 1280, 1920]
+  },
+  "workflow": {
+    "draft_mode": false,
+    "approval_required": false,
+    "version_control": true,
+    "collaboration": false
+  },
+  "api": {
+    "rate_limit": {
+      "requests_per_minute": 100,
+      "burst_limit": 20
+    },
+    "authentication": {
+      "type": "bearer",
+      "header": "Authorization"
+    },
+    "cors": {
+      "enabled": true,
+      "origins": ["https://goldcopytrading.com", "https://www.goldcopytrading.com"]
+    }
+  },
+  "monitoring": {
+    "error_tracking": true,
+    "performance_monitoring": true,
+    "content_analytics": true,
+    "cache_hit_rate": true
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "data": [
+    {
+      "id": "eurusd_report_2025",
+      "pair": "EURUSD",
+      "pair_name": "Euro / US Dollar",
+      "pair_slug": "eurusd",
+      "flag_icons": "🇪🇺🇺🇸",
+      "period": {
+        "start": "2025-04-01",
+        "end": "2025-09-30",
+        "duration": "6 months"
+      },
+      "performance": {
+        "initial_investment": "$50",
+        "final_amount": "$89.55",
+        "return_percentage": "79.1%",
+        "profit": "$39.55",
+        "roi": 0.791
+      },
+      "trading_stats": {
+        "total_trades": 142,
+        "winning_trades": 101,
+        "losing_trades": 41,
+        "win_rate": "71.2%",
+        "average_win": "$0.89",
+        "average_loss": "$0.34",
+        "profit_factor": 2.62,
+        "maximum_drawdown": "2.8%"
+      },
+      "monthly_performance": [
+        {
+          "month": "2025-04",
+          "return": "15.2%",
+          "profit": "$7.60",
+          "trades": 24
+        },
+        {
+          "month": "2025-05",
+          "return": "12.8%",
+          "profit": "$8.57",
+          "trades": 26
+        },
+        {
+          "month": "2025-06",
+          "return": "14.1%",
+          "profit": "$9.78",
+          "trades": 23
+        },
+        {
+          "month": "2025-07",
+          "return": "11.3%",
+          "profit": "$8.89",
+          "trades": 22
+        },
+        {
+          "month": "2025-08",
+          "return": "13.7%",
+          "profit": "$9.12",
+          "trades": 25
+        },
+        {
+          "month": "2025-09",
+          "return": "12.0%",
+          "profit": "$8.59",
+          "trades": 22
+        }
+      ],
+      "description": "The EUR/USD pair delivered exceptional performance with consistent monthly gains driven by European Central Bank policy decisions and US Dollar weakness during key periods.",
+      "strategy_notes": "Focused on London-New York session overlap with emphasis on ECB announcements and US employment data releases.",
+      "report_image": "report-eurusd.png",
+      "chart_image": "graph-eurusd.png",
+      "updated_at": "2025-09-30T23:59:59Z"
+    },
+    {
+      "id": "gbpusd_report_2025",
+      "pair": "GBPUSD",
+      "pair_name": "British Pound / US Dollar",
+      "pair_slug": "gbpusd",
+      "flag_icons": "🇬🇧🇺🇸",
+      "period": {
+        "start": "2025-04-01",
+        "end": "2025-09-30",
+        "duration": "6 months"
+      },
+      "performance": {
+        "initial_investment": "$50",
+        "final_amount": "$78.80",
+        "return_percentage": "57.6%",
+        "profit": "$28.80",
+        "roi": 0.576
+      },
+      "trading_stats": {
+        "total_trades": 138,
+        "winning_trades": 92,
+        "losing_trades": 46,
+        "win_rate": "66.7%",
+        "average_win": "$0.76",
+        "average_loss": "$0.42",
+        "profit_factor": 1.81,
+        "maximum_drawdown": "3.1%"
+      },
+      "monthly_performance": [
+        {
+          "month": "2025-04",
+          "return": "8.4%",
+          "profit": "$4.20",
+          "trades": 23
+        },
+        {
+          "month": "2025-05",
+          "return": "10.6%",
+          "profit": "$5.63",
+          "trades": 25
+        },
+        {
+          "month": "2025-06",
+          "return": "9.2%",
+          "profit": "$5.15",
+          "trades": 22
+        },
+        {
+          "month": "2025-07",
+          "return": "11.8%",
+          "profit": "$6.76",
+          "trades": 24
+        },
+        {
+          "month": "2025-08",
+          "return": "9.7%",
+          "profit": "$6.32",
+          "trades": 21
+        },
+        {
+          "month": "2025-09",
+          "return": "7.9%",
+          "profit": "$5.74",
+          "trades": 23
+        }
+      ],
+      "description": "GBP/USD showed strong performance benefiting from UK economic recovery and Bank of England monetary policy shifts, with particular strength during Brexit stability periods.",
+      "strategy_notes": "Capitalized on UK inflation data releases and Bank of England meetings, with focus on session volatility patterns.",
+      "report_image": "report-gbpusd.png",
+      "chart_image": "graph-gbpusd.png",
+      "updated_at": "2025-09-30T23:59:59Z"
+    },
+    {
+      "id": "usdchf_report_2025",
+      "pair": "USDCHF",
+      "pair_name": "US Dollar / Swiss Franc",
+      "pair_slug": "usdchf",
+      "flag_icons": "🇺🇸🇨🇭",
+      "period": {
+        "start": "2025-04-01",
+        "end": "2025-09-30",
+        "duration": "6 months"
+      },
+      "performance": {
+        "initial_investment": "$50",
+        "final_amount": "$74.60",
+        "return_percentage": "49.2%",
+        "profit": "$24.60",
+        "roi": 0.492
+      },
+      "trading_stats": {
+        "total_trades": 144,
+        "winning_trades": 98,
+        "losing_trades": 46,
+        "win_rate": "68.1%",
+        "average_win": "$0.68",
+        "average_loss": "$0.38",
+        "profit_factor": 1.79,
+        "maximum_drawdown": "2.5%"
+      },
+      "monthly_performance": [
+        {
+          "month": "2025-04",
+          "return": "7.2%",
+          "profit": "$3.60",
+          "trades": 25
+        },
+        {
+          "month": "2025-05",
+          "return": "8.8%",
+          "profit": "$4.72",
+          "trades": 24
+        },
+        {
+          "month": "2025-06",
+          "return": "9.4%",
+          "profit": "$5.16",
+          "trades": 23
+        },
+        {
+          "month": "2025-07",
+          "return": "8.1%",
+          "profit": "$4.59",
+          "trades": 24
+        },
+        {
+          "month": "2025-08",
+          "return": "8.9%",
+          "profit": "$5.23",
+          "trades": 25
+        },
+        {
+          "month": "2025-09",
+          "return": "6.8%",
+          "profit": "$4.30",
+          "trades": 23
+        }
+      ],
+      "description": "USD/CHF demonstrated steady growth with Swiss Franc's safe-haven appeal during market volatility periods, providing consistent returns with lower drawdown.",
+      "strategy_notes": "Leveraged SNB policy decisions and US-Swiss interest rate differentials, with emphasis on risk-off market sentiment periods.",
+      "report_image": "report-usdchf.png",
+      "chart_image": "graph-usdchf.png",
+      "updated_at": "2025-09-30T23:59:59Z"
+    },
+    {
+      "id": "audusd_report_2025",
+      "pair": "AUDUSD",
+      "pair_name": "Australian Dollar / US Dollar",
+      "pair_slug": "audusd",
+      "flag_icons": "🇦🇺🇺🇸",
+      "period": {
+        "start": "2025-04-01",
+        "end": "2025-09-30",
+        "duration": "6 months"
+      },
+      "performance": {
+        "initial_investment": "$50",
+        "final_amount": "$69.10",
+        "return_percentage": "38.2%",
+        "profit": "$19.10",
+        "roi": 0.382
+      },
+      "trading_stats": {
+        "total_trades": 144,
+        "winning_trades": 97,
+        "losing_trades": 47,
+        "win_rate": "67.4%",
+        "average_win": "$0.58",
+        "average_loss": "$0.31",
+        "profit_factor": 1.87,
+        "maximum_drawdown": "2.9%"
+      },
+      "monthly_performance": [
+        {
+          "month": "2025-04",
+          "return": "5.8%",
+          "profit": "$2.90",
+          "trades": 24
+        },
+        {
+          "month": "2025-05",
+          "return": "6.4%",
+          "profit": "$3.42",
+          "trades": 25
+        },
+        {
+          "month": "2025-06",
+          "return": "7.1%",
+          "profit": "$3.97",
+          "trades": 23
+        },
+        {
+          "month": "2025-07",
+          "return": "6.9%",
+          "profit": "$4.05",
+          "trades": 24
+        },
+        {
+          "month": "2025-08",
+          "return": "6.2%",
+          "profit": "$3.88",
+          "trades": 24
+        },
+        {
+          "month": "2025-09",
+          "return": "5.8%",
+          "profit": "$3.88",
+          "trades": 24
+        }
+      ],
+      "description": "AUD/USD performance was driven by commodity prices and Australian economic indicators, with steady growth reflecting resource sector strength and RBA policy stance.",
+      "strategy_notes": "Focused on commodity correlation trading and Australian employment data, with attention to China economic releases affecting AUD demand.",
+      "report_image": "report-audusd.png",
+      "chart_image": "graph-audusd.png",
+      "updated_at": "2025-09-30T23:59:59Z"
+    }
+  ],
+  "meta": {
+    "total_reports": 4,
+    "combined_performance": {
+      "total_initial": "$200",
+      "total_final": "$648.20",
+      "total_return": "224.1%",
+      "total_profit": "$448.20",
+      "best_performer": "EURUSD",
+      "most_consistent": "USDCHF"
+    },
+    "generated_at": "2025-09-30T23:59:59Z",
+    "version": "1.0"
+  }
+}

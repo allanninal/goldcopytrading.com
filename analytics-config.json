@@ -1,0 +1,209 @@
+{
+  "analytics": {
+    "google_analytics": {
+      "measurement_id": "G-JYMV22G2B2",
+      "enhanced_measurement": true,
+      "debug_mode": false,
+      "conversion_linker": true,
+      "allow_google_signals": true
+    },
+    "google_ads": {
+      "conversion_id": "AW-XXXXXXXXXX",
+      "conversion_labels": {
+        "copy_trade_click": "XXXXXXXX",
+        "form_submission": "YYYYYYYY",
+        "report_engagement": "ZZZZZZZZ"
+      }
+    },
+    "facebook_pixel": {
+      "pixel_id": "XXXXXXXXXXXXXXXXX",
+      "events": {
+        "copy_trade_click": "Purchase",
+        "form_submission": "Lead",
+        "report_engagement": "ViewContent"
+      }
+    },
+    "linkedin_insight": {
+      "partner_id": "XXXXXXX"
+    }
+  },
+  "conversion_goals": {
+    "primary": [
+      {
+        "name": "copy_trade_click",
+        "value": 200,
+        "currency": "USD",
+        "category": "conversion"
+      },
+      {
+        "name": "form_submission",
+        "value": 50,
+        "currency": "USD",
+        "category": "lead"
+      }
+    ],
+    "secondary": [
+      {
+        "name": "report_engagement",
+        "value": 25,
+        "currency": "USD",
+        "category": "engagement"
+      },
+      {
+        "name": "faq_interaction",
+        "value": 10,
+        "currency": "USD",
+        "category": "engagement"
+      }
+    ]
+  },
+  "tracking_settings": {
+    "enhanced_ecommerce": true,
+    "user_id_tracking": true,
+    "demographic_tracking": true,
+    "interest_tracking": true,
+    "remarketing": true,
+    "cross_domain_tracking": ["goldcopytrading.com", "my.litefinance.org"],
+    "attribution_model": "data_driven",
+    "conversion_window": {
+      "click": 30,
+      "view": 1
+    }
+  },
+  "custom_dimensions": {
+    "currency_pair": 1,
+    "trading_performance": 2,
+    "user_segment": 3,
+    "page_category": 4,
+    "engagement_level": 5,
+    "attribution_source": 6,
+    "conversion_funnel_step": 7,
+    "ab_test_variant": 8
+  },
+  "custom_metrics": {
+    "engagement_score": 1,
+    "conversion_probability": 2,
+    "lead_score": 3,
+    "session_value": 4,
+    "time_to_conversion": 5
+  },
+  "ab_tests": {
+    "hero_cta_test": {
+      "variants": ["control", "variant_a", "variant_b"],
+      "traffic_split": [34, 33, 33],
+      "goal_metric": "copy_trade_click",
+      "status": "active"
+    },
+    "pricing_display_test": {
+      "variants": ["show_minimum", "show_range"],
+      "traffic_split": [50, 50],
+      "goal_metric": "form_submission",
+      "status": "active"
+    }
+  },
+  "funnel_steps": [
+    {
+      "name": "page_view",
+      "description": "User lands on homepage",
+      "trigger": "pageview"
+    },
+    {
+      "name": "performance_view",
+      "description": "User views performance section",
+      "trigger": "scroll_to_element",
+      "element": ".performance-highlights"
+    },
+    {
+      "name": "report_interest",
+      "description": "User clicks on report link",
+      "trigger": "click",
+      "element": "a[href*='/reports/']"
+    },
+    {
+      "name": "cta_view",
+      "description": "User views CTA section",
+      "trigger": "scroll_to_element",
+      "element": ".cta-buttons"
+    },
+    {
+      "name": "copy_trade_intent",
+      "description": "User clicks copy trading button",
+      "trigger": "click",
+      "element": "a[href*='litefinance.org']"
+    }
+  ],
+  "segmentation": {
+    "user_types": {
+      "new_visitor": {
+        "definition": "First-time visitor",
+        "targeting": "acquisition_campaigns"
+      },
+      "returning_visitor": {
+        "definition": "2-3 visits",
+        "targeting": "engagement_campaigns"
+      },
+      "engaged_visitor": {
+        "definition": "Multiple interactions, 3+ visits",
+        "targeting": "conversion_campaigns"
+      },
+      "high_intent": {
+        "definition": "Form submission or high engagement",
+        "targeting": "retargeting_campaigns"
+      }
+    },
+    "content_categories": {
+      "homepage": "landing_acquisition",
+      "reports": "proof_engagement",
+      "faq": "support_consideration"
+    }
+  },
+  "alerts": {
+    "conversion_drop": {
+      "threshold": -20,
+      "period": "daily",
+      "notification": "email"
+    },
+    "traffic_spike": {
+      "threshold": 50,
+      "period": "hourly",
+      "notification": "email"
+    },
+    "error_rate": {
+      "threshold": 5,
+      "period": "hourly",
+      "notification": "slack"
+    }
+  },
+  "reporting": {
+    "dashboards": [
+      {
+        "name": "Conversion Overview",
+        "metrics": ["copy_trade_clicks", "form_submissions", "conversion_rate", "revenue"],
+        "frequency": "daily"
+      },
+      {
+        "name": "User Journey",
+        "metrics": ["funnel_completion", "drop_off_points", "time_to_conversion"],
+        "frequency": "weekly"
+      },
+      {
+        "name": "Performance Analysis",
+        "metrics": ["page_load_time", "bounce_rate", "engagement_rate"],
+        "frequency": "daily"
+      }
+    ],
+    "automated_reports": {
+      "daily_summary": {
+        "recipients": ["admin@goldcopytrading.com"],
+        "time": "09:00",
+        "timezone": "UTC"
+      },
+      "weekly_analysis": {
+        "recipients": ["admin@goldcopytrading.com"],
+        "day": "monday",
+        "time": "10:00",
+        "timezone": "UTC"
+      }
+    }
+  }
+}
