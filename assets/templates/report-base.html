@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PAIR_NAME}} Trading Report - {{RETURN}}% Returns | Gold Copy Trading</title>
+    <meta name="description" content="{{PAIR_NAME}} trading strategy achieved {{RETURN}}% returns with {{TRADES}} trades and zero losing months. {{DESCRIPTION}}.">
+    <meta name="keywords" content="{{PAIR_NAME}} trading, forex trading results, copy trading, {{RETURN}}% returns, currency trading, professional trading strategy, verified performance">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Gold Copy Trading">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{PAIR_NAME}} Trading Report - {{RETURN}}% Returns">
+    <meta property="og:description" content="{{PAIR_NAME}} trading strategy achieved {{RETURN}}% returns with {{TRADES}} trades and zero losing months. {{DESCRIPTION}}.">
+    <meta property="og:image" content="https://goldcopytrading.com/reports/report-{{PAIR_SLUG}}.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.goldcopytrading.com/reports/{{PAIR_SLUG}}.html">
+    <meta property="og:site_name" content="Gold Copy Trading">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://goldcopytrading.com/reports/{{PAIR_SLUG}}.html">
+    <meta property="twitter:title" content="{{PAIR_NAME}} Trading Report - {{RETURN}}% Returns">
+    <meta property="twitter:description" content="{{PAIR_NAME}} trading strategy achieved {{RETURN}}% returns with {{TRADES}} trades and zero losing months. {{DESCRIPTION}}.">
+    <meta property="twitter:image" content="https://goldcopytrading.com/reports/report-{{PAIR_SLUG}}.png">
+    <meta property="twitter:image:alt" content="{{PAIR_NAME}} Trading Report - {{RETURN}}% Returns Professional Analysis">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://goldcopytrading.com/reports/{{PAIR_SLUG}}.html">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialProduct",
+      "name": "{{PAIR_NAME}} Trading Strategy",
+      "description": "Professional {{PAIR_NAME}} trading strategy with {{RETURN}}% returns in 6 months",
+      "provider": {
+        "@type": "Organization",
+        "name": "Gold Copy Trading",
+        "url": "https://www.goldcopytrading.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "description": "Copy trading service for {{PAIR_NAME}} currency pair",
+        "url": "https://my.litefinance.org/traders/chart?id=1255923&uid=135262069"
+      },
+      "mainEntity": {
+        "@type": "InvestmentOrDeposit",
+        "name": "{{PAIR_NAME}} Trading Performance",
+        "description": "6-month {{PAIR_NAME}} trading results showing {{RETURN}}% returns",
+        "amount": {
+          "@type": "MonetaryAmount",
+          "currency": "USD",
+          "value": "{{PROFIT}}"
+        },
+        "yield": "{{RETURN}}%",
+        "duration": "P6M"
+      }
+    }
+    </script>
+
+    <!-- Performance Optimization - Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://my.litefinance.org">
+
+    <!-- Stylesheets -->
+    <link rel="preload" href="../assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../assets/css/main.css"></noscript>
+    
+    <link rel="preload" href="../assets/css/reports.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../assets/css/reports.css"></noscript>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" defer></script>
+    
+    <!-- Report utilities -->
+    <script src="../assets/js/report-utils.js" defer></script>
+    <script src="../assets/js/utils.js" defer></script>
+</head>
+<body>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../index.html#performance">Reports</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{PAIR_NAME}} Report</li>
+        </ol>
+    </nav>
+
+    <main id="main-content" role="main">
+        <div class="report-container">
+            <!-- Report Header -->
+            <header class="report-header">
+                <h1 class="report-title">{{FLAG_ICONS}} {{PAIR_NAME}} Trading Excellence - {{RETURN}}% Returns</h1>
+                <p class="report-subtitle">Professional {{PAIR_NAME}} Trading Strategy | April - September 2025 Performance</p>
+            </header>
+
+            <!-- Performance Overview -->
+            <section class="performance-overview" aria-labelledby="performance-heading">
+                <h2 id="performance-heading" class="sr-only">Performance Overview</h2>
+                <div class="highlight-box">
+                    <h2>{{PERFORMANCE_TITLE}}</h2>
+                    <p>{{PERFORMANCE_DESCRIPTION}}</p>
+
+                    <div class="performance-highlights" role="list" aria-label="Key performance metrics">
+                        {{PERFORMANCE_HIGHLIGHTS}}
+                    </div>
+
+                    <!-- Verified Results Image -->
+                    <div class="report-image-container">
+                        <img src="report-{{PAIR_SLUG}}.png" 
+                             alt="Verified {{PAIR_NAME}} Trading Report - {{RETURN}}% Returns Professional Analysis"
+                             class="report-image" 
+                             loading="lazy" 
+                             width="800" 
+                             height="600" 
+                             data-src="report-{{PAIR_SLUG}}.png" />
+                        <p class="report-image-caption">
+                            ✅ Verified Trading Results - Professional {{PAIR_NAME}} Market Analysis
+                        </p>
+                    </div>
+
+                    <!-- CTA Section -->
+                    <div class="report-cta-section">
+                        <h3>Want to Copy These {{PAIR_NAME}} Results?</h3>
+                        <p>Join hundreds of successful copy traders who are already following our proven {{PAIR_NAME}} strategy.</p>
+                        <div class="cta-buttons">
+                            <a href="https://my.litefinance.org/traders/chart?id=1255923&uid=135262069" 
+                               class="btn btn-primary"
+                               aria-describedby="copy-description">
+                                Copy {{PAIR_NAME}} Trades
+                            </a>
+                            <div id="copy-description" class="sr-only">
+                                Start copying our {{PAIR_NAME}} trading strategy with verified {{RETURN}}% returns
+                            </div>
+                            <a href="../index.html" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chart Section -->
+            <section class="chart-section" aria-labelledby="chart-heading">
+                <h2 id="chart-heading" class="sr-only">Trading Performance Chart</h2>
+                <div class="chart-container">
+                    <canvas id="{{CHART_ID}}" 
+                            role="img"
+                            aria-label="{{PAIR_NAME}} monthly trading performance chart showing returns over 6-month period from April to September 2025"></canvas>
+                </div>
+                
+                <!-- Static Graph Image as backup -->
+                <div class="chart-backup">
+                    <img src="graph-{{PAIR_SLUG}}.png" 
+                         alt="{{PAIR_NAME}} Trading Performance Graph - {{RETURN}}% Returns {{PAIR_DESCRIPTION}}"
+                         class="chart-backup-image"
+                         loading="lazy"
+                         data-src="graph-{{PAIR_SLUG}}.png" />
+                    <p class="chart-backup-caption">
+                        📊 Detailed {{PAIR_NAME}} Performance Visualization - {{PAIR_DESCRIPTION}}
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Statistics Section -->
+            <section class="stats-section" aria-labelledby="stats-heading">
+                <h2 id="stats-heading" class="sr-only">Key Statistics</h2>
+                <div class="stats-container" role="list" aria-label="Trading performance statistics">
+                    {{STATISTICS_CARDS}}
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="report-footer">
+        <div class="container">
+            <p>&copy; 2025 Gold Copy Trading. All rights reserved.</p>
+            <p class="disclaimer">
+                <strong>Risk Disclaimer:</strong> Trading foreign exchange carries a high level of risk and may not be suitable for all investors. 
+                Past performance is not indicative of future results.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Report-specific JavaScript -->
+    <script>
+        // Wait for Chart.js and report utilities to load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize chart with pair-specific data
+            if (window.ReportUtils && typeof initializeChart === 'function') {
+                try {
+                    initializeChart();
+                } catch (error) {
+                    console.error('Chart initialization failed:', error);
+                    window.ReportUtils.ErrorHandler.handleChartError(error, document.querySelector('.chart-container'));
+                }
+            }
+            
+            // Generate breadcrumbs
+            if (window.ReportUtils && window.ReportUtils.Navigation) {
+                window.ReportUtils.Navigation.generateBreadcrumbs('{{PAIR_NAME}} Report');
+            }
+            
+            // Track page view
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    page_title: '{{PAIR_NAME}} Trading Report',
+                    page_location: window.location.href,
+                    content_group1: 'Trading Reports',
+                    content_group2: '{{PAIR_NAME}}',
+                    custom_parameters: {
+                        currency_pair: '{{PAIR_NAME}}',
+                        performance: '{{RETURN}}%',
+                        total_trades: {{TRADES}}
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
