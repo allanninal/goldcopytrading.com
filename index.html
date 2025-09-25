@@ -462,10 +462,56 @@
                     <h3>Our Verified Portfolio on LiteFinance</h3>
                     <p>Copy our complete 4-currency strategy that achieved 224.1% returns with zero losing months. Professional diversification across EUR/USD, GBP/USD, USD/CHF, and AUD/USD.</p>
 
-                    <!-- Portfolio Summary -->
-                    <div style="background-color: var(--dark-gray); padding: 20px; border-radius: 10px; margin: 20px 0; text-align: left;">
-                        <h4 style="color: var(--gold); margin-bottom: 15px; text-align: center;">Portfolio Performance Summary</h4>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <!-- Copy Trading Details Component -->
+                    <div class="copy-trading-details" style="background-color: var(--dark-gray); padding: 20px; border-radius: 10px; margin: 20px 0; text-align: left;">
+                        <h4 style="color: var(--gold); margin-bottom: 20px; text-align: center;">Copy Trading Details</h4>
+
+                        <!-- Profits from copying -->
+                        <div class="detail-item" style="border: 2px solid #e0e0e0; border-radius: 8px; margin-bottom: 15px; background: white;">
+                            <button class="detail-button" style="width: 100%; padding: 15px 20px; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 1rem; color: #666; text-align: left;"
+                                    onclick="toggleDetail(this)" aria-expanded="false">
+                                <span style="font-weight: 500;">Profits from copying (% of copying traders' profit)</span>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span style="font-weight: bold; color: #333; font-size: 1.1rem;">25%</span>
+                                    <i class="fas fa-plus" style="color: #999; font-size: 0.9rem;"></i>
+                                </div>
+                            </button>
+                            <div class="detail-content" style="display: none; padding: 0 20px 15px 20px; color: #555; border-top: 1px solid #f0f0f0;">
+                                <p style="margin: 15px 0 0 0; line-height: 1.5;">You keep 75% of all profits generated. The strategy provider receives 25% only when your account is profitable, ensuring aligned interests for consistent returns.</p>
+                            </div>
+                        </div>
+
+                        <!-- Partner's commission -->
+                        <div class="detail-item" style="border: 2px solid #e0e0e0; border-radius: 8px; margin-bottom: 15px; background: white;">
+                            <button class="detail-button" style="width: 100%; padding: 15px 20px; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 1rem; color: #666; text-align: left;"
+                                    onclick="toggleDetail(this)" aria-expanded="false">
+                                <span style="font-weight: 500;">Partner's commission (% of profit)</span>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span style="font-weight: bold; color: #333; font-size: 1.1rem;">50%</span>
+                                    <i class="fas fa-plus" style="color: #999; font-size: 0.9rem;"></i>
+                                </div>
+                            </button>
+                            <div class="detail-content" style="display: none; padding: 0 20px 15px 20px; color: #555; border-top: 1px solid #f0f0f0;">
+                                <p style="margin: 15px 0 0 0; line-height: 1.5;">Our referral partner receives 50% commission on profitable trades. This partnership allows us to provide verified strategies while maintaining transparency in all fee structures.</p>
+                            </div>
+                        </div>
+
+                        <!-- Minimum investment -->
+                        <div class="detail-item" style="border: 2px solid #e0e0e0; border-radius: 8px; margin-bottom: 15px; background: white;">
+                            <button class="detail-button" style="width: 100%; padding: 15px 20px; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 1rem; color: #666; text-align: left;"
+                                    onclick="toggleDetail(this)" aria-expanded="false">
+                                <span style="font-weight: 500;">Minimum investment</span>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span style="font-weight: bold; color: #333; font-size: 1.1rem;">200.00 USD</span>
+                                    <i class="fas fa-plus" style="color: #999; font-size: 0.9rem;"></i>
+                                </div>
+                            </button>
+                            <div class="detail-content" style="display: none; padding: 0 20px 15px 20px; color: #555; border-top: 1px solid #f0f0f0;">
+                                <p style="margin: 15px 0 0 0; line-height: 1.5;">Start with $200 minimum investment per currency pair, or scale proportionally to your budget. Our diversified approach across 4 pairs provides professional risk management while maintaining accessibility for retail investors.</p>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
                             <div>
                                 <div style="color: var(--gold); font-weight: 600;">Total Return:</div>
                                 <div style="color: var(--white); font-size: 1.1rem; font-weight: 700;">224.1%</div>
@@ -854,6 +900,49 @@
             // Start the auto-refresh cycle
             updateMyFXBookData();
         });
+
+        // Copy Trading Details Toggle Functionality
+        function toggleDetail(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+            if (!isExpanded) {
+                // Open
+                content.style.display = 'block';
+                button.setAttribute('aria-expanded', 'true');
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+
+                // Smooth animation
+                content.style.maxHeight = '0px';
+                content.style.overflow = 'hidden';
+                content.style.transition = 'max-height 0.3s ease';
+                requestAnimationFrame(() => {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                });
+
+                // Track analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'copy_details_expand', {
+                        'event_category': 'Engagement',
+                        'event_label': button.querySelector('span').textContent.trim()
+                    });
+                }
+            } else {
+                // Close
+                content.style.maxHeight = '0px';
+                button.setAttribute('aria-expanded', 'false');
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+
+                setTimeout(() => {
+                    content.style.display = 'none';
+                    content.style.maxHeight = 'none';
+                    content.style.transition = 'none';
+                }, 300);
+            }
+        }
     </script>
 
     <!-- Error Handling, Image Optimization, Performance Monitoring & PWA Management -->
