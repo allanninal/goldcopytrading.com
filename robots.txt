@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://goldcopytrading.com/sitemap.xml
+Sitemap: https://www.goldcopytrading.com/sitemap.xml
