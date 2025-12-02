@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Copy trade with DailyScalper - A disciplined forex scalping strategy with 89% win rate, 2.19 profit factor, and verified performance on MyFXBook. No grid or martingale. Copy on LiteFinance or MQL5.">
+    <meta name="keywords" content="copy trading, forex scalping, LiteFinance copy trader, MQL5 signals, DailyScalper, forex signals, EURUSD, GBPUSD, NZDUSD, USDCHF, verified trader, automated trading, forex copy trading, scalping strategy">
+    <meta name="author" content="DailyScalper">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0a0a0b">
+    <meta name="msapplication-TileColor" content="#0a0a0b">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goldcopytrading.com/">
+    <meta property="og:site_name" content="DailyScalper">
+    <meta property="og:title" content="DailyScalper - Verified Forex Copy Trading | 89% Win Rate">
+    <meta property="og:description" content="Copy a disciplined forex scalping strategy with 89% win rate and 2.19 profit factor. Verified on MyFXBook. Available on LiteFinance and MQL5.">
+    <meta property="og:image" content="https://goldcopytrading.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="DailyScalper Copy Trading - 89% Win Rate, Verified Performance">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DailyScalper - Verified Forex Copy Trading | 89% Win Rate">
+    <meta name="twitter:description" content="Copy a disciplined forex scalping strategy. 89% win rate, 2.19 profit factor. Verified on MyFXBook. No grid or martingale.">
+    <meta name="twitter:image" content="https://goldcopytrading.com/og-image.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://goldcopytrading.com/">
+
+    <title>DailyScalper | Verified Forex Copy Trading on LiteFinance & MQL5</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data for AI Search - Person/Trader -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "DailyScalper",
+        "jobTitle": "Forex Trader & Signal Provider",
+        "description": "Professional forex trader specializing in disciplined scalping strategies. Verified performance with 89% win rate across 293+ trades.",
+        "url": "https://goldcopytrading.com",
+        "sameAs": [
+            "https://my.litefinance.org/traders/info?id=1255923&uid=135262069",
+            "https://www.mql5.com/en/signals/2327778",
+            "https://www.myfxbook.com/members/allanninal/lhandix-scalper/11670937",
+            "https://t.me/DailyScalperFX"
+        ],
+        "knowsAbout": ["Forex Trading", "Scalping Strategy", "Technical Analysis", "Automated Trading", "Copy Trading"],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "PH"
+        }
+    }
+    </script>
+
+    <!-- Structured Data for AI Search - Service -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Forex Copy Trading",
+        "name": "DailyScalper Copy Trading Service",
+        "description": "Copy a disciplined forex scalping strategy with verified 89% win rate and 2.19 profit factor. No grid or martingale systems. Available on LiteFinance (30% profit commission) and MQL5 ($30/month).",
+        "url": "https://goldcopytrading.com",
+        "provider": {
+            "@type": "Person",
+            "name": "DailyScalper"
+        },
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Copy Trading Options",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "name": "LiteFinance Copy Trading",
+                    "description": "Beginner-friendly copy trading with no VPS required. Pay 30% commission only on profits.",
+                    "url": "https://my.litefinance.org/traders/info?id=1255923&uid=135262069"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "MQL5 Signal Subscription",
+                    "description": "For MT4/MT5 users. Fixed $30/month subscription. Requires VPS for 24/7 operation.",
+                    "price": "30.00",
+                    "priceCurrency": "USD",
+                    "url": "https://www.mql5.com/en/signals/2327778"
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Structured Data for AI Search - FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is DailyScalper's win rate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DailyScalper has a verified 89.41% win rate across 293 trades, with 262 profitable trades and 31 losing trades. This is independently verified on MyFXBook."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What markets does DailyScalper trade?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DailyScalper trades four major forex pairs: EUR/USD, GBP/USD, NZD/USD, and USD/CHF, focusing on London and New York trading sessions for optimal volatility."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between LiteFinance and MQL5 copy trading?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "LiteFinance is beginner-friendly with no VPS required and charges 30% commission on profits only. MQL5 requires a VPS ($19+/month) plus a $30/month signal subscription but offers fixed costs, making it more cost-effective for accounts over $1,000."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does DailyScalper use grid or martingale strategies?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. DailyScalper uses pure technical analysis with no grid or martingale systems. Every trade has defined entry and exit points with conservative position sizing of 0.01 lot per $250 capital."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is DailyScalper's maximum drawdown?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The maximum drawdown by balance is 9.63% ($34.27). The strategy maintains a recovery factor of 3.73 and a profit factor of 2.19."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data for AI Search - WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "DailyScalper",
+        "url": "https://goldcopytrading.com",
+        "description": "Verified forex copy trading service with 89% win rate. Copy DailyScalper's disciplined scalping strategy on LiteFinance or MQL5."
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="#10B981"/>
+                        <path d="M8 20L12 12L16 16L20 8L24 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="logo-text">DailyScalper</span>
+            </div>
+            <nav class="nav">
+                <a href="#performance" class="nav-link">Performance</a>
+                <a href="#strategy" class="nav-link">Strategy</a>
+                <a href="#how-to-copy" class="nav-link">How to Copy</a>
+                <a href="https://my.litefinance.org/traders/info?id=1255923&uid=135262069" class="btn btn-primary" target="_blank" rel="noopener">Copy Now</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#performance" class="mobile-nav-link">Performance</a>
+        <a href="#strategy" class="mobile-nav-link">Strategy</a>
+        <a href="#how-to-copy" class="mobile-nav-link">How to Copy</a>
+        <a href="https://my.litefinance.org/traders/info?id=1255923&uid=135262069" class="btn btn-primary btn-block" target="_blank" rel="noopener">Copy Now</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                Verified Performance
+            </div>
+            <h1 class="hero-title">Disciplined Scalping.<br><span class="gradient-text">Consistent Results.</span></h1>
+            <p class="hero-subtitle">Copy a pure technical trading strategy with no grid or martingale. Verified on MyFXBook with transparent, real-time results.</p>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-value gradient-text">42.60%</span>
+                    <span class="stat-label">Total Gain</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">89.41%</span>
+                    <span class="stat-label">Win Rate</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">2.19</span>
+                    <span class="stat-label">Profit Factor</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">4/10</span>
+                    <span class="stat-label">Risk Score</span>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="https://my.litefinance.org/traders/info?id=1255923&uid=135262069" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                    Start Copying
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.16666 10H15.8333M15.8333 10L10 4.16667M15.8333 10L10 15.8333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="https://www.myfxbook.com/members/allanninal/lhandix-scalper/11670937" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">
+                    Verify on MyFXBook
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="section">
+        <div class="container">
+            <h2 class="section-title">Monthly Performance</h2>
+            <p class="section-subtitle">Consistent monthly gains with controlled drawdown</p>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <div class="chart-bar" style="--height: 17%">
+                        <span class="chart-value">2.79%</span>
+                        <span class="chart-label">Aug</span>
+                    </div>
+                    <div class="chart-bar" style="--height: 50%">
+                        <span class="chart-value">8.18%</span>
+                        <span class="chart-label">Sep</span>
+                    </div>
+                    <div class="chart-bar highlight" style="--height: 100%">
+                        <span class="chart-value">16.45%</span>
+                        <span class="chart-label">Oct</span>
+                    </div>
+                    <div class="chart-bar" style="--height: 57%">
+                        <span class="chart-value">9.41%</span>
+                        <span class="chart-label">Nov</span>
+                    </div>
+                </div>
+                <p class="chart-note">Monthly gain percentage (Aug - Nov 2025)</p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                    <div class="metric-content">
+                        <span class="metric-value">11.06%</span>
+                        <span class="metric-label">Monthly Average</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 17L9 11L13 15L21 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 7H21V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <div class="metric-content">
+                        <span class="metric-value">126.43%</span>
+                        <span class="metric-label">Annual Forecast</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-icon warning">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 9V13M12 17H12.01M5.07 19H18.93C20.47 19 21.45 17.33 20.68 16L13.75 4C12.98 2.67 11.02 2.67 10.25 4L3.32 16C2.55 17.33 3.53 19 5.07 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <div class="metric-content">
+                        <span class="metric-value">9.63%</span>
+                        <span class="metric-label">Max Drawdown</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <div class="metric-content">
+                        <span class="metric-value">3.73</span>
+                        <span class="metric-label">Recovery Factor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section id="strategy" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Trading Strategy</h2>
+            <p class="section-subtitle">A disciplined approach to forex scalping</p>
+
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 4V28M16 4L8 12M16 4L24 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Pure Technical Analysis</h3>
+                    <p>No grid or martingale systems. Every trade is based on technical analysis with defined entry and exit points.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 10V16L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>London/NY Sessions</h3>
+                    <p>Active trading during high-liquidity sessions for optimal volatility and tighter spreads.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="8" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 16H20M16 12V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Conservative Sizing</h3>
+                    <p>0.01 lot per $250 capital. Risk management is the priority to protect your investment.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 16H8L12 8L16 24L20 12L24 16H28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>100% Automated</h3>
+                    <p>Fully algorithmic execution removes emotional decisions and ensures consistent strategy application.</p>
+                </div>
+            </div>
+
+            <div class="markets-section">
+                <h3>Markets Traded</h3>
+                <div class="markets-list">
+                    <span class="market-badge">EUR/USD</span>
+                    <span class="market-badge">GBP/USD</span>
+                    <span class="market-badge">NZD/USD</span>
+                    <span class="market-badge">USD/CHF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="section">
+        <div class="container">
+            <h2 class="section-title">Detailed Statistics</h2>
+            <p class="section-subtitle">Transparent performance data verified on MyFXBook</p>
+
+            <div class="stats-grid">
+                <div class="stats-category">
+                    <h3>Trading Activity</h3>
+                    <div class="stats-list">
+                        <div class="stats-row">
+                            <span>Total Trades</span>
+                            <span class="stats-value">293</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Trades per Week</span>
+                            <span class="stats-value">19</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Avg Holding Time</span>
+                            <span class="stats-value">1 day</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Trading Activity</span>
+                            <span class="stats-value">93.44%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-category">
+                    <h3>Win/Loss Breakdown</h3>
+                    <div class="stats-list">
+                        <div class="stats-row">
+                            <span>Profit Trades</span>
+                            <span class="stats-value positive">262 (89.41%)</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Loss Trades</span>
+                            <span class="stats-value negative">31 (10.58%)</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Longs Won</span>
+                            <span class="stats-value positive">120/132 (90%)</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Shorts Won</span>
+                            <span class="stats-value positive">142/161 (88%)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-category">
+                    <h3>Profit Metrics</h3>
+                    <div class="stats-list">
+                        <div class="stats-row">
+                            <span>Gross Profit</span>
+                            <span class="stats-value positive">$235.56</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Gross Loss</span>
+                            <span class="stats-value negative">-$107.71</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Average Win</span>
+                            <span class="stats-value">$0.90 (13.09 pips)</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Average Loss</span>
+                            <span class="stats-value">-$3.47 (-75.89 pips)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-category">
+                    <h3>Risk Metrics</h3>
+                    <div class="stats-list">
+                        <div class="stats-row">
+                            <span>Max Consecutive Wins</span>
+                            <span class="stats-value">85</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Max Consecutive Losses</span>
+                            <span class="stats-value">6</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Max Deposit Load</span>
+                            <span class="stats-value">13.15%</span>
+                        </div>
+                        <div class="stats-row">
+                            <span>Expected Payoff</span>
+                            <span class="stats-value">$0.44</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="verification-section">
+                <h3>Verify Performance</h3>
+                <p>All statistics are independently verified. Check the live results on these platforms:</p>
+                <div class="verification-links">
+                    <a href="https://my.litefinance.org/traders/info?id=1255923&uid=135262069" class="verification-card" target="_blank" rel="noopener">
+                        <span class="verification-name">LiteFinance</span>
+                        <span class="verification-desc">Copy Trading Platform</span>
+                    </a>
+                    <a href="https://www.mql5.com/en/signals/2327778" class="verification-card" target="_blank" rel="noopener">
+                        <span class="verification-name">MQL5</span>
+                        <span class="verification-desc">Signal Provider</span>
+                    </a>
+                    <a href="https://www.myfxbook.com/members/allanninal/lhandix-scalper/11670937" class="verification-card" target="_blank" rel="noopener">
+                        <span class="verification-name">MyFXBook</span>
+                        <span class="verification-desc">Independent Verification</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Copy Section -->
+    <section id="how-to-copy" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Choose Your Copy Method</h2>
+            <p class="section-subtitle">Two ways to copy the DailyScalper strategy - pick what works best for you</p>
+
+            <div class="copy-options-grid">
+                <!-- LiteFinance Option -->
+                <div class="copy-option-card">
+                    <div class="copy-option-header">
+                        <h3>LiteFinance</h3>
+                        <span class="copy-option-badge beginner">Beginner Friendly</span>
+                    </div>
+                    <div class="copy-option-price">
+                        <span class="price-main">30%</span>
+                        <span class="price-desc">commission on profits only</span>
+                    </div>
+                    <ul class="copy-option-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50001 14.1667L3.33334 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            No VPS or server required
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50001 14.1667L3.33334 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            One-click setup on their platform
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50001 14.1667L3.33334 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Pay only when you profit
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50001 14.1667L3.33334 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Stop copying anytime
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50001 14.1667L3.33334 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            No minimum deposit
+                        </li>
+                    </ul>
+                    <p class="copy-option-best">Best for: Beginners, those who want a simple setup with no technical requirements</p>
+                    <a href="https://my.litefinance.org/traders/info?id=1255923&uid=135262069" class="btn btn-primary btn-block" target="_blank" rel="noopener">Copy on LiteFinance</a>
+                </div>
+
+                <!-- MQL5 Option -->
+                <div class="copy-option-card">
+                    <div class="copy-option-header">
+                        <h3>MQL5 Signals</h3>
+                        <span class="copy-option-badge advanced">For MT4/MT5 Users</span>
+                    </div>
+                    <div class="copy-option-price">
+                        <span class="price-main">$30</span>
+                        <span class="price-desc">per month + VPS cost</span>
+                    </div>
+                    <ul class="copy-option-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50001 14.1667L3.33334 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Use with any MT4/MT5 broker
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50001 14.1667L3.33334 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Full control over your account
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50001 14.1667L3.33334 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Fixed monthly fee (no profit share)
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50001 14.1667L3.33334 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Requires VPS for 24/7 copying
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6667 5L7.50001 14.1667L3.33334 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            More cost-effective for larger accounts
+                        </li>
+                    </ul>
+                    <p class="copy-option-best">Best for: Experienced traders with existing MT4/MT5 broker, larger account balances</p>
+                    <a href="https://www.mql5.com/en/signals/2327778" class="btn btn-primary btn-block" target="_blank" rel="noopener">Subscribe on MQL5</a>
+                </div>
+            </div>
+
+            <!-- VPS Requirement Notice -->
+            <div class="vps-notice">
+                <div class="vps-notice-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 9V13M12 17H12.01M5.07 19H18.93C20.47 19 21.45 17.33 20.68 16L13.75 4C12.98 2.67 11.02 2.67 10.25 4L3.32 16C2.55 17.33 3.53 19 5.07 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="vps-notice-content">
+                    <h4>MQL5 Requires a VPS (Virtual Private Server)</h4>
+                    <p>To copy MQL5 signals, your MetaTrader must run 24/7. A Forex VPS ensures your trades are copied even when your computer is off.</p>
+                </div>
+            </div>
+
+            <!-- FXVM Recommendation -->
+            <div class="vps-recommendation">
+                <div class="vps-recommendation-header">
+                    <h3>Recommended VPS: FXVM</h3>
+                    <div class="vps-rating">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#fbbf24"><path d="M8 0L10.3 5.1L16 5.8L12 9.5L13 15L8 12.4L3 15L4 9.5L0 5.8L5.7 5.1L8 0Z"/></svg>
+                        <span>4.9/5 on Trustpilot (3,600+ reviews)</span>
+                    </div>
+                </div>
+                <div class="vps-features">
+                    <div class="vps-feature">
+                        <span class="vps-feature-value">12+</span>
+                        <span class="vps-feature-label">Years Experience</span>
+                    </div>
+                    <div class="vps-feature">
+                        <span class="vps-feature-value">&lt;5ms</span>
+                        <span class="vps-feature-label">Latency to Brokers</span>
+                    </div>
+                    <div class="vps-feature">
+                        <span class="vps-feature-value">100%</span>
+                        <span class="vps-feature-label">Uptime Guarantee</span>
+                    </div>
+                    <div class="vps-feature">
+                        <span class="vps-feature-value">19</span>
+                        <span class="vps-feature-label">Global Locations</span>
+                    </div>
+                </div>
+                <ul class="vps-benefits">
+                    <li>Pre-installed MetaTrader 4 & 5 - ready to trade in minutes</li>
+                    <li>Servers in New York, London, Tokyo, Frankfurt & Singapore</li>
+                    <li>24/7 support with fast response times</li>
+                    <li>7-day money-back guarantee</li>
+                    <li>Starting from $19/month (Lite plan with 1.5GB RAM)</li>
+                </ul>
+                <a href="https://fxvm.net/?aff=30702" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">
+                    Get FXVM VPS
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+
+            <!-- Cost Comparison -->
+            <div class="cost-comparison">
+                <h3>Monthly Cost Comparison</h3>
+                <div class="cost-table">
+                    <div class="cost-row cost-header">
+                        <span>Option</span>
+                        <span>Monthly Cost</span>
+                        <span>Best For</span>
+                    </div>
+                    <div class="cost-row">
+                        <span>LiteFinance</span>
+                        <span>30% of profits</span>
+                        <span>Accounts under $1,000</span>
+                    </div>
+                    <div class="cost-row">
+                        <span>MQL5 + VPS</span>
+                        <span>~$49/month fixed</span>
+                        <span>Accounts over $1,000</span>
+                    </div>
+                </div>
+                <p class="cost-note">Example: With $2,000 account making 10% monthly ($200 profit), LiteFinance costs $60 vs MQL5's fixed $49.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Copying?</h2>
+                <p>Choose the platform that works best for you</p>
+                <div class="cta-buttons">
+                    <a href="https://my.litefinance.org/traders/info?id=1255923&uid=135262069" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                        Copy on LiteFinance
+                    </a>
+                    <a href="https://www.mql5.com/en/signals/2327778" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">
+                        Subscribe on MQL5
+                    </a>
+                </div>
+                <p class="cta-hint">Not sure which to choose? <a href="#how-to-copy">Compare options above</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="32" height="32" rx="8" fill="#10B981"/>
+                                <path d="M8 20L12 12L16 16L20 8L24 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span class="logo-text">DailyScalper</span>
+                    </div>
+                    <p class="footer-desc">Disciplined forex scalping strategy available for copy trading on LiteFinance and MQL5.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Copy Trading</h4>
+                    <a href="https://my.litefinance.org/traders/info?id=1255923&uid=135262069" target="_blank" rel="noopener">LiteFinance</a>
+                    <a href="https://www.mql5.com/en/signals/2327778" target="_blank" rel="noopener">MQL5 Signals</a>
+                    <a href="https://www.myfxbook.com/members/allanninal/lhandix-scalper/11670937" target="_blank" rel="noopener">MyFXBook</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <a href="https://t.me/DailyScalperFX" target="_blank" rel="noopener">Telegram: @DailyScalperFX</a>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p><strong>Risk Disclaimer:</strong> Forex trading involves substantial risk of loss and is not suitable for all investors. Past performance is not indicative of future results. Only trade with money you can afford to lose. The information on this website is for educational purposes only and should not be considered financial advice.</p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 DailyScalper. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
